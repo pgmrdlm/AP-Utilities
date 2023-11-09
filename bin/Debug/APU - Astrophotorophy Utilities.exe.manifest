@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="APU - Astrophotorophy Utilities.exe" size="45992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="APU - Astrophotorophy Utilities.exe" size="46504">
       <assemblyIdentity name="APU - Astrophotorophy Utilities" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kmfzj50nTTRo5momlrnDkzJeMWEnnwfpd78Ffz/q8J0=</dsig:DigestValue>
+        <dsig:DigestValue>/S15mc7pxFmHjrmxmGpn/qMKyTT0x5SZgcDvQUZv680=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
