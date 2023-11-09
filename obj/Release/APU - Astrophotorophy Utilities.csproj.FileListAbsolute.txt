@@ -1,0 +1,50 @@
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\APU - Astrophotorophy Utilities.exe.config
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\APU - Astrophotorophy Utilities.exe
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\APU - Astrophotorophy Utilities.pdb
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\EntityFramework.dll
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\System.Data.SQLite.dll
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\System.Data.SQLite.EF6.dll
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\EntityFramework.xml
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\System.Data.SQLite.xml
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.csproj.AssemblyReference.cache
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\obj\Release\APU___Astrophotorophy_Utilities.frm_AP_Utilities.resources
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\obj\Release\APU___Astrophotorophy_Utilities.Properties.Resources.resources
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.csproj.GenerateResource.cache
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.csproj.CoreCompileInputs.cache
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.csproj.CopyComplete
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.exe
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.pdb
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\APU - Astrophotorophy Utilities.exe.manifest
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\bin\Release\APU - Astrophotorophy Utilities.application
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.exe.manifest
+C:\Users\pgmrdlm\My Drive (pgmrdlm@gmail.com)\DSLR Notes and backup\Software\Scripts\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.application
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\APU - Astrophotorophy Utilities.exe.config
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\APU - Astrophotorophy Utilities.exe.manifest
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\APU - Astrophotorophy Utilities.application
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\APU - Astrophotorophy Utilities.exe
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\APU - Astrophotorophy Utilities.pdb
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\EntityFramework.dll
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\System.Data.SQLite.dll
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\System.Data.SQLite.EF6.dll
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\EntityFramework.xml
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\bin\Release\System.Data.SQLite.xml
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.csproj.AssemblyReference.cache
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU___Astrophotorophy_Utilities.frm_AP_Utilities.resources
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU___Astrophotorophy_Utilities.Properties.Resources.resources
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU___Astrophotorophy_Utilities.ATI_Resources.resources
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU___Astrophotorophy_Utilities.db_Astro_Connection.resources
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU___Astrophotorophy_Utilities.AE_Resources.resources
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.csproj.GenerateResource.cache
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.csproj.CoreCompileInputs.cache
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.exe.manifest
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.application
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.csproj.CopyComplete
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.exe
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.pdb
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.TrustInfo.xml

@@ -1,0 +1,5 @@
+E:\AP Utilities\obj\Debug\AP Utilities.csproj.AssemblyReference.cache
+E:\AP Utilities\obj\Debug\APU___Astrophotorophy_Utilities.frm_AP_Utilities.resources
+E:\AP Utilities\obj\Debug\AP_Utilities.Properties.Resources.resources
+E:\AP Utilities\obj\Debug\AP Utilities.csproj.GenerateResource.cache
+E:\AP Utilities\obj\Debug\AP Utilities.csproj.CoreCompileInputs.cache
