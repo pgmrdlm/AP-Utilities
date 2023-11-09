@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
 
 namespace APU___Astrophotorophy_Utilities
 {
@@ -81,36 +82,59 @@ namespace APU___Astrophotorophy_Utilities
             return intValidDatates;
         }
 
-        public void VerifyDateFolders(string strFullDatePath, string strFlag)
+        public bool VerifyDateFolders(string strFullDatePath, string strFlag)
         {
             string[] arrEquipmentDirectories = Directory.GetDirectories(strFullDatePath, "*", SearchOption.TopDirectoryOnly);
             var strTarget = Path.GetFileName(strFullDatePath);
             
             var strPath = arrEquipmentDirectories[0];
+            string strDate = "";
             var strLens = Path.GetFileName(strPath);
             string[] arrDateDirectories = Directory.GetDirectories(strPath, "Light_*", SearchOption.TopDirectoryOnly);
-            
-            
+
+
             //
             // Verifies that there is at least 1 valid date folder under the equipment folder
             //
+            bool bolDoesItExist = false;
             for (int i = 0; i < arrDateDirectories.Length; i++)
             {
                 var strDateFolderName = Path.GetFileName(arrDateDirectories[i]);
-                var strDate = strDateFolderName.Substring(6, 4) + strDateFolderName.Substring(11, 2) + strDateFolderName.Substring(14, 2);
+                strDate = strDateFolderName.Substring(6, 4) + strDateFolderName.Substring(11, 2) + strDateFolderName.Substring(14, 2);
                 try
                 {
                     string strCheckDate = DateTime.ParseExact(strDate, "yyyyMMdd",
                         CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
+                    var strUpdateFlag = strFlag.ToUpper();
                     db_ATID_Table ATID_Table = new db_ATID_Table();
-                    ATID_Table.BuildATID(strTarget, strLens, strDate);
+
+                    if (strUpdateFlag == "Y")
+                    {
+                        ATID_Table.BuildATID(strTarget, strLens, strDate);
+                    } else
+                    {
+                        bolDoesItExist = ATID_Table.QueryATID(strTarget, strLens, strDate);
+                    }
                 }
                 catch
                 {
+
                 }
 
             }
-            
+            if (bolDoesItExist == true)
+            {
+                MessageBox.Show("This data has already been recorded for " +
+                    strTarget +
+                    " " +
+                strLens +
+                    " " +
+                    strDate
+
+                    );
+                return bolDoesItExist;
+            }
+            return bolDoesItExist;
         }
     }
 }

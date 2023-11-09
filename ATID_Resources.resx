@@ -122,7 +122,7 @@
 VALUES (@Target, @Lens, @CCYYMMDD)</value>
     <comment>Insert the ATID row</comment>
   </data>
-  <data name="ChheckForDate" xml:space="preserve">
+  <data name="CheckDateTable" xml:space="preserve">
     <value>select * from Astro_Target_Imaged_Date WHERE ATI_TargetName = @Target AND ATI_Telescope_Lens_Used = @Lens AND ATID_CCYYMMDD = @Date</value>
     <comment>check for rows on Astro_Target_Imaged_Date table</comment>
   </data>

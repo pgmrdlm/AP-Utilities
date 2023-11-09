@@ -11,44 +11,46 @@ namespace APU___Astrophotorophy_Utilities
     {
 
 
-        public bool QueryATID(string strTargetName, string strCaera, string strCCYYMMDD)
+        public bool QueryATID(string strTargetName, string strLens, string strCCYYMMDD)
         {
 
             var connectionString = db_Astro_Connection.db_connection;
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
-                bool bolAddRows = false;
-                var CheckForTarget = ATI_Resources.CheckForTarget;
+                bool bldHasRows = false;
+                var CheckForTarget = ATID_Resources.CheckDateTable;
                 SQLiteCommand command =
                      new SQLiteCommand(CheckForTarget, conn);
                 command.Parameters.Add(new SQLiteParameter("@Target", strTargetName));
+                command.Parameters.Add(new SQLiteParameter("@Lens", strLens));
+                command.Parameters.Add(new SQLiteParameter("@Date", strCCYYMMDD));
                 using (SQLiteDataReader TargetReader = command.ExecuteReader())
                 {
 
                     if (TargetReader.HasRows)
                     {
 
-                        bolAddRows = false;
+                        bldHasRows = true;
                         conn.Close();
                         SQLiteConnection.ClearAllPools();
                         GC.Collect();
-
+                        return bldHasRows;
                     }
-                    bolAddRows = true;
+                    bldHasRows = false;
                     conn.Close();
                     conn.Dispose();
                     SQLiteConnection.ClearAllPools();
                     GC.Collect();
-                    return bolAddRows;
+                    return bldHasRows;
                 }
 
-                bolAddRows = true;
+                bldHasRows = true;
                 conn.Close();
                 conn.Dispose();
                 SQLiteConnection.ClearAllPools();
                 GC.Collect();
-                return bolAddRows;
+                return bldHasRows;
             }
 
 

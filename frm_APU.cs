@@ -484,6 +484,19 @@ namespace APU___Astrophotorophy_Utilities
                         MessageBoxButtons btnButtons = MessageBoxButtons.OK;
                         MessageBox.Show(strMsgBoxMsg, strMsgBoxTitle, btnButtons, MessageBoxIcon.Error);
                         txb_NewDataInput.Text = String.Empty;
+                    } else
+                    {
+                        var strFlag = "N";
+                        VerifyFolders NewData = new VerifyFolders();
+                        var strfullPath = txb_NewDataInput.Text;
+                        var strFolderName1 = Path.GetFileName(txb_NewDataInput.Text);
+                        bool bolDoesItExist = NewData.VerifyDateFolders(strfullPath, strFlag);
+                        if (bolDoesItExist == false)
+                        {
+                            btn_SelectNewDataOutput.Visible = true;
+                            txb_NewDataIOutput.Visible = true;
+                        }
+                        return;
                     }
                 }
                 
@@ -504,11 +517,11 @@ namespace APU___Astrophotorophy_Utilities
 
         private void btn_AddNewData_Click(object sender, EventArgs e)
         {
-            var strFlag = "y";
+            var strFlag = "Y";
             VerifyFolders NewData = new VerifyFolders();
             var strfullPath = txb_NewDataIOutput.Text;
-            var strFolderName1 = Path.GetFileName(txb_NewDataIOutput.Text);
-            NewData.VerifyDateFolders(txb_NewDataIOutput.Text, strFlag);
+            var strFolderName1 = Path.GetFileName(txb_NewDataInput.Text);
+            NewData.VerifyDateFolders(txb_NewDataInput.Text, strFlag);
             RunRobocopy.RunRobocopy(txb_InputFolderPath.Text, txb_OutputFolderPath.Text);
             btn_SelectOutput.Visible = false;
             btn_SelectInput.Visible = false;

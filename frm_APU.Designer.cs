@@ -141,6 +141,7 @@
             this.txb_NewDataIOutput.ReadOnly = true;
             this.txb_NewDataIOutput.Size = new System.Drawing.Size(851, 22);
             this.txb_NewDataIOutput.TabIndex = 1;
+            this.txb_NewDataIOutput.Visible = false;
             // 
             // btn_SelectNewDataOutput
             // 
@@ -150,6 +151,7 @@
             this.btn_SelectNewDataOutput.TabIndex = 0;
             this.btn_SelectNewDataOutput.Text = "Select Output";
             this.btn_SelectNewDataOutput.UseVisualStyleBackColor = true;
+            this.btn_SelectNewDataOutput.Visible = false;
             this.btn_SelectNewDataOutput.Click += new System.EventHandler(this.btn_SelectNewDataOutput_Click);
             // 
             // txb_NewDataInput

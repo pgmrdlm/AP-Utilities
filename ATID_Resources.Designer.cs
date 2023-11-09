@@ -73,9 +73,9 @@ namespace APU___Astrophotorophy_Utilities {
         /// <summary>
         ///   Looks up a localized string similar to select * from Astro_Target_Imaged_Date WHERE ATI_TargetName = @Target AND ATI_Telescope_Lens_Used = @Lens AND ATID_CCYYMMDD = @Date.
         /// </summary>
-        internal static string ChheckForDate {
+        internal static string CheckDateTable {
             get {
-                return ResourceManager.GetString("ChheckForDate", resourceCulture);
+                return ResourceManager.GetString("CheckDateTable", resourceCulture);
             }
         }
     }
