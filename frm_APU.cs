@@ -73,10 +73,6 @@ namespace APU___Astrophotorophy_Utilities
             {
                 pnl_AddNewData.Visible = true;
                 pnl_AddNewData.Show();
-               // pnl_CopyFolders.Visible=false;
-               // pnl_CopyFolders.Hide();
-               // pnl_TargetAndEqipment.Visible = false;
-               // pnl_TargetAndEqipment.Hide();
 
             }
             
@@ -126,7 +122,7 @@ namespace APU___Astrophotorophy_Utilities
                 string strFolderName1 = Path.GetFileName(txb_InputFolderPath.Text);
                 string strMessage = "Is " +
                     strFolderName1 +
-                    " a session target?";
+                    " a new Astrophotrophy target?";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result = MessageBox.Show(strMessage, "Target Folder?", buttons);
                 //
@@ -192,18 +188,8 @@ namespace APU___Astrophotorophy_Utilities
 
                     } else
                     {
-                        //
-                        // panel 1 - The input folder that was selected has already been recorded to
-                        // the database and at this point the input folder is assumed to be more data
-                        // to be added. 
-                        //
-                        var strFlag = "y";
-                        VerifyFolders NewData = new VerifyFolders();
+                        MessageBox.Show("This target has already been created.  Chose add new data action if this is what you are attempting to do!");
 
-                        var strfullPath = txb_InputFolderPath.Text;
-                        strFolderName1 = Path.GetFileName(txb_InputFolderPath.Text);
-                        
-                        NewData.VerifyDateFolders(txb_InputFolderPath.Text, strFlag);
                     }
                     //
                     // Default action to display panel 1 no matter if this is new data or additional
@@ -505,7 +491,8 @@ namespace APU___Astrophotorophy_Utilities
 
           
         }
-
+        //
+        // Panel for new data - Logic to add execute log for any new data for an existing target already on the db
         private void btn_SelectNewDataOutput_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
@@ -513,6 +500,24 @@ namespace APU___Astrophotorophy_Utilities
                 txb_NewDataIOutput.Text = folderBrowserDialog1.SelectedPath;
                 btn_AddNewData.Visible = true;
             }
+        }
+
+        private void btn_AddNewData_Click(object sender, EventArgs e)
+        {
+            var strFlag = "y";
+            VerifyFolders NewData = new VerifyFolders();
+            var strfullPath = txb_NewDataIOutput.Text;
+            var strFolderName1 = Path.GetFileName(txb_NewDataIOutput.Text);
+            NewData.VerifyDateFolders(txb_NewDataIOutput.Text, strFlag);
+            RunRobocopy.RunRobocopy(txb_InputFolderPath.Text, txb_OutputFolderPath.Text);
+            btn_SelectOutput.Visible = false;
+            btn_SelectInput.Visible = false;
+            btn_Submit.Visible = false;
+            cmb_SelectAction.SelectedIndex = -1;
+            txb_InputFolderPath.Text = String.Empty;
+            txb_OutputFolderPath.Text = String.Empty;
+            pnl_AddNewData.Visible = false;
+            pnl_AddNewData.Hide();
         }
     }
     

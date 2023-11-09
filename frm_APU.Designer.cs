@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AP_Utilities));
             this.pnl_CopyFolders = new System.Windows.Forms.Panel();
+            this.pnl_AddNewData = new System.Windows.Forms.Panel();
+            this.grb_AddNewData = new System.Windows.Forms.GroupBox();
+            this.btn_AddNewData = new System.Windows.Forms.Button();
+            this.txb_NewDataIOutput = new System.Windows.Forms.TextBox();
+            this.btn_SelectNewDataOutput = new System.Windows.Forms.Button();
+            this.txb_NewDataInput = new System.Windows.Forms.TextBox();
+            this.btn_SelectNewDataInput = new System.Windows.Forms.Button();
             this.lbl_SelectAction = new System.Windows.Forms.Label();
             this.cmb_SelectAction = new System.Windows.Forms.ComboBox();
             this.btn_Submit = new System.Windows.Forms.Button();
@@ -64,21 +71,14 @@
             this.lbl_ImageCamera = new System.Windows.Forms.Label();
             this.cmb_ImageLensTelescope = new System.Windows.Forms.ComboBox();
             this.cmb_ImageCamera = new System.Windows.Forms.ComboBox();
-            this.pnl_AddNewData = new System.Windows.Forms.Panel();
-            this.grb_AddNewData = new System.Windows.Forms.GroupBox();
-            this.btn_SelectNewDataInput = new System.Windows.Forms.Button();
-            this.txb_NewDataInput = new System.Windows.Forms.TextBox();
-            this.btn_SelectNewDataOutput = new System.Windows.Forms.Button();
-            this.txb_NewDataIOutput = new System.Windows.Forms.TextBox();
-            this.btn_AddNewData = new System.Windows.Forms.Button();
             this.pnl_CopyFolders.SuspendLayout();
+            this.pnl_AddNewData.SuspendLayout();
+            this.grb_AddNewData.SuspendLayout();
             this.pnl_TargetAndEqipment.SuspendLayout();
             this.grb_TargetAndMount.SuspendLayout();
             this.grb_TypeOfAction.SuspendLayout();
             this.grp_GuideEquipment.SuspendLayout();
             this.grb_CamerasScopesAndFilter.SuspendLayout();
-            this.pnl_AddNewData.SuspendLayout();
-            this.grb_AddNewData.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_CopyFolders
@@ -96,6 +96,80 @@
             this.pnl_CopyFolders.Size = new System.Drawing.Size(1160, 501);
             this.pnl_CopyFolders.TabIndex = 1;
             this.pnl_CopyFolders.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_CopyImageData_Paint);
+            // 
+            // pnl_AddNewData
+            // 
+            this.pnl_AddNewData.Controls.Add(this.grb_AddNewData);
+            this.pnl_AddNewData.Location = new System.Drawing.Point(13, 8);
+            this.pnl_AddNewData.Name = "pnl_AddNewData";
+            this.pnl_AddNewData.Size = new System.Drawing.Size(1090, 400);
+            this.pnl_AddNewData.TabIndex = 6;
+            this.pnl_AddNewData.Visible = false;
+            // 
+            // grb_AddNewData
+            // 
+            this.grb_AddNewData.Controls.Add(this.btn_AddNewData);
+            this.grb_AddNewData.Controls.Add(this.txb_NewDataIOutput);
+            this.grb_AddNewData.Controls.Add(this.btn_SelectNewDataOutput);
+            this.grb_AddNewData.Controls.Add(this.txb_NewDataInput);
+            this.grb_AddNewData.Controls.Add(this.btn_SelectNewDataInput);
+            this.grb_AddNewData.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grb_AddNewData.ForeColor = System.Drawing.Color.DarkRed;
+            this.grb_AddNewData.Location = new System.Drawing.Point(36, 34);
+            this.grb_AddNewData.Name = "grb_AddNewData";
+            this.grb_AddNewData.Size = new System.Drawing.Size(1025, 245);
+            this.grb_AddNewData.TabIndex = 0;
+            this.grb_AddNewData.TabStop = false;
+            this.grb_AddNewData.Text = "Add new Data to Existing Target";
+            // 
+            // btn_AddNewData
+            // 
+            this.btn_AddNewData.Location = new System.Drawing.Point(138, 109);
+            this.btn_AddNewData.Name = "btn_AddNewData";
+            this.btn_AddNewData.Size = new System.Drawing.Size(100, 23);
+            this.btn_AddNewData.TabIndex = 2;
+            this.btn_AddNewData.Text = "Add Data";
+            this.btn_AddNewData.UseVisualStyleBackColor = true;
+            this.btn_AddNewData.Visible = false;
+            this.btn_AddNewData.Click += new System.EventHandler(this.btn_AddNewData_Click);
+            // 
+            // txb_NewDataIOutput
+            // 
+            this.txb_NewDataIOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_NewDataIOutput.Location = new System.Drawing.Point(138, 67);
+            this.txb_NewDataIOutput.Name = "txb_NewDataIOutput";
+            this.txb_NewDataIOutput.ReadOnly = true;
+            this.txb_NewDataIOutput.Size = new System.Drawing.Size(851, 22);
+            this.txb_NewDataIOutput.TabIndex = 1;
+            // 
+            // btn_SelectNewDataOutput
+            // 
+            this.btn_SelectNewDataOutput.Location = new System.Drawing.Point(7, 67);
+            this.btn_SelectNewDataOutput.Name = "btn_SelectNewDataOutput";
+            this.btn_SelectNewDataOutput.Size = new System.Drawing.Size(108, 23);
+            this.btn_SelectNewDataOutput.TabIndex = 0;
+            this.btn_SelectNewDataOutput.Text = "Select Output";
+            this.btn_SelectNewDataOutput.UseVisualStyleBackColor = true;
+            this.btn_SelectNewDataOutput.Click += new System.EventHandler(this.btn_SelectNewDataOutput_Click);
+            // 
+            // txb_NewDataInput
+            // 
+            this.txb_NewDataInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_NewDataInput.Location = new System.Drawing.Point(138, 35);
+            this.txb_NewDataInput.Name = "txb_NewDataInput";
+            this.txb_NewDataInput.ReadOnly = true;
+            this.txb_NewDataInput.Size = new System.Drawing.Size(851, 22);
+            this.txb_NewDataInput.TabIndex = 1;
+            // 
+            // btn_SelectNewDataInput
+            // 
+            this.btn_SelectNewDataInput.Location = new System.Drawing.Point(7, 35);
+            this.btn_SelectNewDataInput.Name = "btn_SelectNewDataInput";
+            this.btn_SelectNewDataInput.Size = new System.Drawing.Size(108, 23);
+            this.btn_SelectNewDataInput.TabIndex = 0;
+            this.btn_SelectNewDataInput.Text = "Select Data Folder";
+            this.btn_SelectNewDataInput.UseVisualStyleBackColor = true;
+            this.btn_SelectNewDataInput.Click += new System.EventHandler(this.btn_SelectNewDataInput_Click);
             // 
             // lbl_SelectAction
             // 
@@ -480,79 +554,6 @@
             this.cmb_ImageCamera.TabIndex = 0;
             this.cmb_ImageCamera.SelectedIndexChanged += new System.EventHandler(this.cmb_ImageCamera_SelectedIndexChanged);
             // 
-            // pnl_AddNewData
-            // 
-            this.pnl_AddNewData.Controls.Add(this.grb_AddNewData);
-            this.pnl_AddNewData.Location = new System.Drawing.Point(13, 8);
-            this.pnl_AddNewData.Name = "pnl_AddNewData";
-            this.pnl_AddNewData.Size = new System.Drawing.Size(1090, 400);
-            this.pnl_AddNewData.TabIndex = 6;
-            this.pnl_AddNewData.Visible = false;
-            // 
-            // grb_AddNewData
-            // 
-            this.grb_AddNewData.Controls.Add(this.btn_AddNewData);
-            this.grb_AddNewData.Controls.Add(this.txb_NewDataIOutput);
-            this.grb_AddNewData.Controls.Add(this.btn_SelectNewDataOutput);
-            this.grb_AddNewData.Controls.Add(this.txb_NewDataInput);
-            this.grb_AddNewData.Controls.Add(this.btn_SelectNewDataInput);
-            this.grb_AddNewData.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grb_AddNewData.ForeColor = System.Drawing.Color.DarkRed;
-            this.grb_AddNewData.Location = new System.Drawing.Point(36, 34);
-            this.grb_AddNewData.Name = "grb_AddNewData";
-            this.grb_AddNewData.Size = new System.Drawing.Size(1025, 245);
-            this.grb_AddNewData.TabIndex = 0;
-            this.grb_AddNewData.TabStop = false;
-            this.grb_AddNewData.Text = "Add new Data to Existing Target";
-            // 
-            // btn_SelectNewDataInput
-            // 
-            this.btn_SelectNewDataInput.Location = new System.Drawing.Point(7, 35);
-            this.btn_SelectNewDataInput.Name = "btn_SelectNewDataInput";
-            this.btn_SelectNewDataInput.Size = new System.Drawing.Size(108, 23);
-            this.btn_SelectNewDataInput.TabIndex = 0;
-            this.btn_SelectNewDataInput.Text = "Select Data Folder";
-            this.btn_SelectNewDataInput.UseVisualStyleBackColor = true;
-            this.btn_SelectNewDataInput.Click += new System.EventHandler(this.btn_SelectNewDataInput_Click);
-            // 
-            // txb_NewDataInput
-            // 
-            this.txb_NewDataInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_NewDataInput.Location = new System.Drawing.Point(138, 35);
-            this.txb_NewDataInput.Name = "txb_NewDataInput";
-            this.txb_NewDataInput.ReadOnly = true;
-            this.txb_NewDataInput.Size = new System.Drawing.Size(851, 22);
-            this.txb_NewDataInput.TabIndex = 1;
-            // 
-            // btn_SelectNewDataOutput
-            // 
-            this.btn_SelectNewDataOutput.Location = new System.Drawing.Point(7, 67);
-            this.btn_SelectNewDataOutput.Name = "btn_SelectNewDataOutput";
-            this.btn_SelectNewDataOutput.Size = new System.Drawing.Size(108, 23);
-            this.btn_SelectNewDataOutput.TabIndex = 0;
-            this.btn_SelectNewDataOutput.Text = "Select Output";
-            this.btn_SelectNewDataOutput.UseVisualStyleBackColor = true;
-            this.btn_SelectNewDataOutput.Click += new System.EventHandler(this.btn_SelectNewDataOutput_Click);
-            // 
-            // txb_NewDataIOutput
-            // 
-            this.txb_NewDataIOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_NewDataIOutput.Location = new System.Drawing.Point(138, 67);
-            this.txb_NewDataIOutput.Name = "txb_NewDataIOutput";
-            this.txb_NewDataIOutput.ReadOnly = true;
-            this.txb_NewDataIOutput.Size = new System.Drawing.Size(851, 22);
-            this.txb_NewDataIOutput.TabIndex = 1;
-            // 
-            // btn_AddNewData
-            // 
-            this.btn_AddNewData.Location = new System.Drawing.Point(138, 109);
-            this.btn_AddNewData.Name = "btn_AddNewData";
-            this.btn_AddNewData.Size = new System.Drawing.Size(100, 23);
-            this.btn_AddNewData.TabIndex = 2;
-            this.btn_AddNewData.Text = "Add Data";
-            this.btn_AddNewData.UseVisualStyleBackColor = true;
-            this.btn_AddNewData.Visible = false;
-            // 
             // frm_AP_Utilities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -566,6 +567,9 @@
             this.Load += new System.EventHandler(this.frm_AP_Utilities_Load);
             this.pnl_CopyFolders.ResumeLayout(false);
             this.pnl_CopyFolders.PerformLayout();
+            this.pnl_AddNewData.ResumeLayout(false);
+            this.grb_AddNewData.ResumeLayout(false);
+            this.grb_AddNewData.PerformLayout();
             this.pnl_TargetAndEqipment.ResumeLayout(false);
             this.grb_TargetAndMount.ResumeLayout(false);
             this.grb_TargetAndMount.PerformLayout();
@@ -575,9 +579,6 @@
             this.grp_GuideEquipment.PerformLayout();
             this.grb_CamerasScopesAndFilter.ResumeLayout(false);
             this.grb_CamerasScopesAndFilter.PerformLayout();
-            this.pnl_AddNewData.ResumeLayout(false);
-            this.grb_AddNewData.ResumeLayout(false);
-            this.grb_AddNewData.PerformLayout();
             this.ResumeLayout(false);
 
         }
