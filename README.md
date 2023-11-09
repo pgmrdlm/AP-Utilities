@@ -1,2 +1,2 @@
-# AP Utilities
- Astrophotography Utilities
+# APU - Repository
+ Astrophotrophy Utilities
