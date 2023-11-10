@@ -121,4 +121,8 @@
     <value>Data Source=..\\..\\Astrophotography DataBase\\Astrophotography.db;Version=3;</value>
     <comment>connection string</comment>
   </data>
+  <data name="InitalDB_Location" xml:space="preserve">
+    <value>..\\..\\Astrophotography DataBase\\Astrophotography.db</value>
+    <comment>Location of db at time of publish</comment>
+  </data>
 </root>

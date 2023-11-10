@@ -17,7 +17,7 @@ namespace APU___Astrophotorophy_Utilities
 
         public List<string> lstEquipment = new List<string>();
 
-        public void VerifyEquipmentFolders(string strInputFolderPath)
+        public bool VerifyEquipmentFolders(string strInputFolderPath)
         {
             // Targets can be imaged different times with different equipment which can be determined by the 
             // directories directly under the target main folder.  Grab all these folder names to see if this
@@ -37,8 +37,9 @@ namespace APU___Astrophotorophy_Utilities
                     bool bolEquipmentExists = ATI_Table.QueryATI(strTargetName, arrDirectories[i]);
                     if (bolEquipmentExists == true)
                     {
+                        bolValidEquipment = false;
+                        return bolValidEquipment;
 
-                        return;
                     }
                    //
                    VerifyFolders CheckDateFolders = new VerifyFolders();
@@ -46,12 +47,17 @@ namespace APU___Astrophotorophy_Utilities
                    var strfullPath = Path.Combine(paths);
                    int intReturnedDateCount = CheckDateFolders.VerifyDateFolders(strfullPath);
                    lstEquipment.Add(arrDirectories[i]);
+                   bolValidEquipment = true;
+                    return bolValidEquipment;
                 } else
                 {
                     MessageBox.Show("Target sub folder " + arrDirectories[i] + " Is not a valid equipment name");
+                    bolValidEquipment = false;
+                    return bolValidEquipment;
                 }
             }
-           
+            bool bolcrap = false;
+            return bolcrap;
         }
         //  }
         public int VerifyDateFolders(string strFullDatePath)
@@ -86,7 +92,7 @@ namespace APU___Astrophotorophy_Utilities
         {
             string[] arrEquipmentDirectories = Directory.GetDirectories(strFullDatePath, "*", SearchOption.TopDirectoryOnly);
             var strTarget = Path.GetFileName(strFullDatePath);
-            
+            string strUpdateFlag = strFlag.ToUpper();
             var strPath = arrEquipmentDirectories[0];
             string strDate = "";
             var strLens = Path.GetFileName(strPath);
@@ -105,12 +111,13 @@ namespace APU___Astrophotorophy_Utilities
                 {
                     string strCheckDate = DateTime.ParseExact(strDate, "yyyyMMdd",
                         CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
-                    var strUpdateFlag = strFlag.ToUpper();
+
                     db_ATID_Table ATID_Table = new db_ATID_Table();
 
                     if (strUpdateFlag == "Y")
                     {
                         ATID_Table.BuildATID(strTarget, strLens, strDate);
+
                     } else
                     {
                         bolDoesItExist = ATID_Table.QueryATID(strTarget, strLens, strDate);
@@ -120,7 +127,37 @@ namespace APU___Astrophotorophy_Utilities
                 {
 
                 }
+                string[] arrExposureDirectories = Directory.GetDirectories(arrDateDirectories[i], "Light_*", SearchOption.TopDirectoryOnly);
+               
+                //
+                // Loop through the exposure folders and add them to the Exposure table
+                //
+                if (strUpdateFlag  == "Y")
+                {
 
+                    for (int y = 0; y < arrExposureDirectories.Length; y++)
+                    {
+                        var strExposureFolderName = Path.GetFileName(arrExposureDirectories[y]);
+                        string[] arrExposureFolder = strExposureFolderName.Split('_');
+                        Decimal decExposure = 0;
+                        try
+                        {
+                            decExposure = Convert.ToDecimal(arrExposureFolder[1]);
+                        }
+                        catch
+                        {
+                            decExposure = Convert.ToDecimal(arrExposureFolder[2]);
+                        }
+                        int fCount = Directory.GetFiles(arrExposureDirectories[y], "*", SearchOption.TopDirectoryOnly).Length;
+                        db_ATIDE_Table ATIDE_Table = new db_ATIDE_Table();
+                        ATIDE_Table.BuildATIDE(
+                            strTarget,
+                            strLens,
+                            strDate,
+                            decExposure,
+                            fCount);
+                    }
+                }
             }
             if (bolDoesItExist == true)
             {

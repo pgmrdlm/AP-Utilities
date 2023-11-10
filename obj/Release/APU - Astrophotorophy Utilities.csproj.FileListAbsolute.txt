@@ -48,3 +48,5 @@ C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astro
 C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.exe
 C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.pdb
 C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU - Astrophotorophy Utilities.TrustInfo.xml
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU___Astrophotorophy_Utilities.ATID_Resources.resources
+C:\Users\pgmrdlm\Desktop\APU - Astrophotorophy Utilities\obj\Release\APU___Astrophotorophy_Utilities.ATIDE_Resources.resources

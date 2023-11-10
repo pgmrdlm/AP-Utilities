@@ -15,6 +15,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using APU___Astrophotorophy_Utilities.APU___Astrophotorophy_Utilities;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Net.Mime.MediaTypeNames;
+using System.Xml.Linq;
 
 namespace APU___Astrophotorophy_Utilities
 {
@@ -43,7 +44,19 @@ namespace APU___Astrophotorophy_Utilities
 
         private void frm_AP_Utilities_Load(object sender, EventArgs e)
         {
-
+           // db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
+           // var strConnectionString = db_ConnectionString.CreateConnectionString();
+           // return;
+            var strAppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string[] strWorkPath = { strAppDataFolder, "APU Data" };
+            var strfullPath = Path.Combine(strWorkPath);
+            if (!Directory.Exists(strfullPath))
+            {
+                Directory.CreateDirectory(strfullPath);
+                MessageBox.Show(strfullPath + " data directory alreadyt exists");
+                File.Copy(Path.Combine("..\\\\..\\\\Astrophotography DataBase\\\\", "Astrophotography.db"), Path.Combine(strfullPath, "Astrophotography.db"), false);
+                MessageBox.Show("Database copied to the appdata area.  Verify"); 
+            }
         }
         private void pnl_CopyImageData_Paint(object sender, PaintEventArgs e)
         {
@@ -133,7 +146,7 @@ namespace APU___Astrophotorophy_Utilities
                 {
                     strFolderName1 = Path.GetFileName(txb_InputFolderPath.Text);
                     VerifyFolders CheckEquipmentFolders = new VerifyFolders();
-                    CheckEquipmentFolders.VerifyEquipmentFolders(txb_InputFolderPath.Text);
+                    bool bolValidEquipment = CheckEquipmentFolders.VerifyEquipmentFolders(txb_InputFolderPath.Text);
                     //
                     // Panel 1 - The input folder that was selected is a target folder and is not
                     // currently recorded on the database.
@@ -188,6 +201,12 @@ namespace APU___Astrophotorophy_Utilities
 
                     } else
                     {
+                        if (bolValidEquipment == false)
+                        {
+                            MessageBox.Show("Invalid Equipment");
+                            return;
+                        }
+                        
                         MessageBox.Show("This target has already been created.  Chose add new data action if this is what you are attempting to do!");
 
                     }

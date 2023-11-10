@@ -68,5 +68,14 @@ namespace APU___Astrophotorophy_Utilities {
                 return ResourceManager.GetString("db_connection", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ..\\..\\Astrophotography DataBase\\Astrophotography.db.
+        /// </summary>
+        internal static string InitalDB_Location {
+            get {
+                return ResourceManager.GetString("InitalDB_Location", resourceCulture);
+            }
+        }
     }
 }

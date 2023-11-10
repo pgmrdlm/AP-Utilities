@@ -13,8 +13,9 @@ namespace APU___Astrophotorophy_Utilities
 
         public bool QueryATID(string strTargetName, string strLens, string strCCYYMMDD)
         {
-
-            var connectionString = db_Astro_Connection.db_connection;
+            db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
+            var connectionString = db_ConnectionString.CreateConnectionString();
+            //var connectionString = db_Astro_Connection.db_connection;
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
@@ -58,14 +59,17 @@ namespace APU___Astrophotorophy_Utilities
         public void BuildATID(string strTargetName, string strLens, string strCCYYMMDD)
         {
 
-            var connectionString = db_Astro_Connection.db_connection;
+            //var connectionString = db_Astro_Connection.db_connection;
+            db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
+            var connectionString = db_ConnectionString.CreateConnectionString();
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
                 bool bolAddRows = false;
                 var BuildATID = ATID_Resources.BldATID;
                 SQLiteCommand command =
-                     new SQLiteCommand(BuildATID, conn);
+                     new SQLiteCommand(BuildATID, conn); 
+           
                 command.Parameters.Add(new SQLiteParameter("@Target", strTargetName));
                 command.Parameters.Add(new SQLiteParameter("@Lens", strLens));
                 command.Parameters.Add(new SQLiteParameter("@CCYYMMDD", strCCYYMMDD));

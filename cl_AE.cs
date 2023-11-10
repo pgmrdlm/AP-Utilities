@@ -35,9 +35,12 @@ namespace APU___Astrophotorophy_Utilities
             
 
 
+
             public void LoadEquipmentForm()
             {
-                var connectionString = db_Astro_Connection.db_connection;
+                db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
+                var connectionString = db_ConnectionString.CreateConnectionString();
+                //var connectionString = db_Astro_Connection.db_connection;
                 using (SQLiteConnection conn = new SQLiteConnection(connectionString))
                 {
                     var AE_Select = AE_Resources.SelectEquipment;
@@ -98,9 +101,10 @@ namespace APU___Astrophotorophy_Utilities
             //
             public bool VerifyEquipmentFolders(string strEquipmentName)
             {
-                
-                var connectionString = db_Astro_Connection.db_connection;
-                bool bolValidFolder = false;
+                bool bolValidEquipment = false;
+                db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
+                var connectionString = db_ConnectionString.CreateConnectionString();
+                //bool bolValidFolder = false;
 
                 using (SQLiteConnection conn = new SQLiteConnection(connectionString))
                 {
@@ -112,21 +116,21 @@ namespace APU___Astrophotorophy_Utilities
                     {
                         if (EquipmentReader.HasRows)
                         {
-                            bolValidFolder = true;
+                            bolValidEquipment = true;
                         }
                         conn.Close();
                         conn.Dispose();
                         SQLiteConnection.ClearAllPools();
                         GC.Collect();
 
-                        return bolValidFolder;
+                        return bolValidEquipment;
                     }
                     conn.Close();
                     conn.Dispose();
                     SQLiteConnection.ClearAllPools();
                     GC.Collect();
 
-                    return bolValidFolder;
+                    return bolValidEquipment;
                 }
             }
         }

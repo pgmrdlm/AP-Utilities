@@ -16,8 +16,9 @@ namespace APU___Astrophotorophy_Utilities
             decimal decExposure,
             int intTotalExposures)
         {
-
-            var connectionString = db_Astro_Connection.db_connection;
+            db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
+            var connectionString = db_ConnectionString.CreateConnectionString();
+            //var connectionString = db_Astro_Connection.db_connection;
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
