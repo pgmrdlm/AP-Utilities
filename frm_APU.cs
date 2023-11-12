@@ -321,6 +321,19 @@ namespace APU___Astrophotorophy_Utilities
                 txb_InputFolderPath.Text = String.Empty;
                 txb_OutputFolderPath.Text = String.Empty;
                 cmb_SelectAction.SelectedIndex = -1;
+                //dlm
+                cmb_MountName.Items.Clear();
+                cmb_ImageCamera.Items.Clear();
+                cmb_ImageLensTelescope.Items.Clear();
+                cmb_Filter.Items.Clear();
+                cmb_GuideCamera.Items.Clear();
+                cmb_GuideScope.Items.Clear();
+                cmb_Bortel.SelectedIndex = -1;
+                txb_Location.Clear();
+                btn_AddTarget.Visible = false;
+                ckb_AddOnly.Checked = false;
+                ckb_AddAndCopy.Checked = false;
+
                 return;
             } else
             {
@@ -334,6 +347,18 @@ namespace APU___Astrophotorophy_Utilities
                 cmb_SelectAction.Visible = true;
                 btn_Submit.Visible = false;
                 cmb_SelectAction.SelectedIndex = -1;
+                //dlm
+                cmb_MountName.Items.Clear();
+                cmb_ImageCamera.Items.Clear();
+                cmb_ImageLensTelescope.Items.Clear();
+                cmb_Filter.Items.Clear();
+                cmb_GuideCamera.Items.Clear();
+                cmb_GuideScope.Items.Clear();
+                cmb_Bortel.SelectedIndex = -1;
+                txb_Location.Clear();
+                btn_AddTarget.Visible = false;
+                ckb_AddOnly.Checked = false;
+                ckb_AddAndCopy.Checked = false;
                 return;
             }
         }
