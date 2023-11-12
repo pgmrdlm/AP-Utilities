@@ -50,12 +50,16 @@ namespace APU___Astrophotorophy_Utilities
             var strAppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string[] strWorkPath = { strAppDataFolder, "APU Data" };
             var strfullPath = Path.Combine(strWorkPath);
+            if (File.Exists(@"Astrophotography.db"))
+            {
+                string strDbName = @"Astrophotography.db";
+            }
+            
             if (!Directory.Exists(strfullPath))
             {
                 Directory.CreateDirectory(strfullPath);
-                MessageBox.Show(strfullPath + " data directory alreadyt exists");
-                File.Copy(Path.Combine("..\\\\..\\\\Astrophotography DataBase\\\\", "Astrophotography.db"), Path.Combine(strfullPath, "Astrophotography.db"), false);
-                MessageBox.Show("Database copied to the appdata area.  Verify"); 
+                File.Copy(Path.Combine(".\\", "Astrophotography.db"), Path.Combine(strfullPath, "Installed_Empty_Astrophotography.db"), false);
+                File.Copy(Path.Combine(".\\", "Astrophotography.db"), Path.Combine(strfullPath, "Astrophotography.db"), false);
             }
         }
         private void pnl_CopyImageData_Paint(object sender, PaintEventArgs e)

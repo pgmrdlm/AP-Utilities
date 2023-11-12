@@ -27,7 +27,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -103,7 +103,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="cl%29_CreateConnectionString.cs" />
+    <Compile Include="cl_createDB_Backup.cs" />
     <Compile Include="cl_ATIDE.cs" />
     <Compile Include="cl_NewTarget.cs" />
     <Compile Include="cl_VerifyFolders.cs" />
@@ -178,6 +179,9 @@
     </EmbeddedResource>
     <None Include=".editorconfig" />
     <None Include="APU - Astrophotorophy Utilities_TemporaryKey.pfx" />
+    <Content Include="Astrophotography.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
