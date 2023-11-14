@@ -83,7 +83,6 @@
             // 
             // pnl_CopyFolders
             // 
-            this.pnl_CopyFolders.Controls.Add(this.pnl_AddNewData);
             this.pnl_CopyFolders.Controls.Add(this.lbl_SelectAction);
             this.pnl_CopyFolders.Controls.Add(this.cmb_SelectAction);
             this.pnl_CopyFolders.Controls.Add(this.btn_Submit);
@@ -100,7 +99,7 @@
             // pnl_AddNewData
             // 
             this.pnl_AddNewData.Controls.Add(this.grb_AddNewData);
-            this.pnl_AddNewData.Location = new System.Drawing.Point(13, 8);
+            this.pnl_AddNewData.Location = new System.Drawing.Point(0, 0);
             this.pnl_AddNewData.Name = "pnl_AddNewData";
             this.pnl_AddNewData.Size = new System.Drawing.Size(1090, 400);
             this.pnl_AddNewData.TabIndex = 6;
@@ -190,7 +189,9 @@
             this.cmb_SelectAction.FormattingEnabled = true;
             this.cmb_SelectAction.Items.AddRange(new object[] {
             "New Target to add to db and/or copy",
-            "Add additional Data for existing target"});
+            "Add additional Data for existing target",
+            "DB Maintenance",
+            "Generate Reports"});
             this.cmb_SelectAction.Location = new System.Drawing.Point(23, 44);
             this.cmb_SelectAction.Name = "cmb_SelectAction";
             this.cmb_SelectAction.Size = new System.Drawing.Size(264, 24);
@@ -563,6 +564,7 @@
             this.ClientSize = new System.Drawing.Size(1239, 613);
             this.Controls.Add(this.pnl_CopyFolders);
             this.Controls.Add(this.pnl_TargetAndEqipment);
+            this.Controls.Add(this.pnl_AddNewData);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_AP_Utilities";
             this.Text = "A.P.U. - Astrophotography Utilities";

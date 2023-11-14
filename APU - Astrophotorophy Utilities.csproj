@@ -27,7 +27,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -112,6 +112,12 @@
     <Compile Include="cl_AE.cs" />
     <Compile Include="cl_ATI_Table.cs" />
     <Compile Include="cl_CopyZipFolders.cs" />
+    <Compile Include="frm_DB_Maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DB_Maintenance.Designer.cs">
+      <DependentUpon>frm_DB_Maintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_APU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ATIDE_Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_DB_Maintenance.resx">
+      <DependentUpon>frm_DB_Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_APU.resx">
       <DependentUpon>frm_APU.cs</DependentUpon>
     </EmbeddedResource>

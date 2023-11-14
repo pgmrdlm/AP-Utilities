@@ -15,7 +15,6 @@ namespace APU___Astrophotorophy_Utilities
         {
             db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
             var connectionString = db_ConnectionString.CreateConnectionString();
-            //var connectionString = db_Astro_Connection.db_connection;
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
@@ -59,7 +58,6 @@ namespace APU___Astrophotorophy_Utilities
         public void BuildATID(string strTargetName, string strLens, string strCCYYMMDD)
         {
 
-            //var connectionString = db_Astro_Connection.db_connection;
             db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
             var connectionString = db_ConnectionString.CreateConnectionString();
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))

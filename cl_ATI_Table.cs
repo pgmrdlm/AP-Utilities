@@ -15,14 +15,11 @@ namespace APU___Astrophotorophy_Utilities
 {
     class db_ATI_Table
     {
-//        string connectionString = "Data Source=..\\..\\Astrophotography DataBase\\Astrophotography.db;Version=3;";
-      
         public bool QueryATI(string strTargetName, string strEquipment)
         {
-            //return true;
+
             db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
             var connectionString = db_ConnectionString.CreateConnectionString();
-            //var connectionString = db_Astro_Connection.db_connection;
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
@@ -72,7 +69,10 @@ namespace APU___Astrophotorophy_Utilities
         }
         public void BuildATI(string strTargetName, string strMount, string strICamera, string strTelescope, string strFilter, string strGuidCamera, string strGuideScope, string strLocation, string strBortle)
         {
-
+            db_backup BackupDataBase = new db_backup();
+            var strBackupDescription = "Before_New_Target_" +
+                strTargetName;
+            BackupDataBase.CreateDB_Backup(strBackupDescription);
             db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
             var connectionString = db_ConnectionString.CreateConnectionString();
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))

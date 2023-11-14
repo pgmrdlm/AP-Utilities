@@ -107,6 +107,10 @@ namespace APU___Astrophotorophy_Utilities
             {
                 var strDateFolderName = Path.GetFileName(arrDateDirectories[i]);
                 strDate = strDateFolderName.Substring(6, 4) + strDateFolderName.Substring(11, 2) + strDateFolderName.Substring(14, 2);
+                var strBackupDescription = "Before_Add_Data_" +
+                    strTarget;
+                db_backup BackupDataBase = new db_backup();
+                BackupDataBase.CreateDB_Backup(strBackupDescription);
                 try
                 {
                     string strCheckDate = DateTime.ParseExact(strDate, "yyyyMMdd",

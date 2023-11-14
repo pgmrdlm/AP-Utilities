@@ -103,3 +103,4 @@ C:\Users\pgmrdlm\Desktop\AP-Utilities\obj\Debug\APU - Astrophotorophy Utilities.
 C:\Users\pgmrdlm\Desktop\AP-Utilities\obj\Debug\APU - Astrophotorophy Utilities.exe
 C:\Users\pgmrdlm\Desktop\AP-Utilities\obj\Debug\APU - Astrophotorophy Utilities.pdb
 C:\Users\pgmrdlm\Desktop\AP-Utilities\bin\Debug\Astrophotography.db
+C:\Users\pgmrdlm\Desktop\AP-Utilities\obj\Debug\APU___Astrophotorophy_Utilities.frm_DB_Maint.resources

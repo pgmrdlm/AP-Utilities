@@ -23,11 +23,8 @@ namespace APU___Astrophotorophy_Utilities
             {
                 string strFolderName1 = Path.GetFileName(strInputFolder);
                 strOutputFolder = Path.Combine(strOutputFolder, strFolderName1);
-
                 Process p = Process.Start("robocopy", string.Format("\"{0}\" \"{1}\" /E /DCOPY:DAT", strInputFolder, strOutputFolder));
-                
                 p.WaitForExit();
-                
                 MessageBox.Show("Data Folder copy complete. ");
             }
        

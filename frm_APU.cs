@@ -27,11 +27,8 @@ namespace APU___Astrophotorophy_Utilities
         }
 
        
-        CopyZipFolders RunRobocopy = new CopyZipFolders();
-        //db_ATI_Table ATI_Table = new db_ATI_Table();
-
-
-
+        //CopyZipFolders RunRobocopy = new CopyZipFolders();
+        
         public string parMount;
         public string parICamera;
         public string parGCamera;
@@ -44,9 +41,6 @@ namespace APU___Astrophotorophy_Utilities
 
         private void frm_AP_Utilities_Load(object sender, EventArgs e)
         {
-           // db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
-           // var strConnectionString = db_ConnectionString.CreateConnectionString();
-           // return;
             var strAppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string[] strWorkPath = { strAppDataFolder, "APU Data" };
             var strfullPath = Path.Combine(strWorkPath);
@@ -90,9 +84,20 @@ namespace APU___Astrophotorophy_Utilities
             {
                 pnl_AddNewData.Visible = true;
                 pnl_AddNewData.Show();
-
             }
-            
+            if (cmb_SelectAction.SelectedIndex == 2)
+            {
+                frm_DB_Maint frm_DB_Maintenance  = new frm_DB_Maint();
+                frm_DB_Maintenance.ShowDialog();
+                cmb_SelectAction.SelectedIndex = -1;
+            }
+            if (cmb_SelectAction.SelectedIndex == 3)
+            {
+                MessageBox.Show("Generate Reports");
+               // pnl_AddNewData.Visible = true;
+                //pnl_AddNewData.Show();
+            }
+
         }
 
         //
@@ -238,7 +243,7 @@ namespace APU___Astrophotorophy_Utilities
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
-                RunRobocopy.strOutputFolder = folderBrowserDialog1.SelectedPath;
+               
                 txb_OutputFolderPath.Text= folderBrowserDialog1.SelectedPath;
                 btn_Submit.Visible = true;
                 
@@ -249,6 +254,7 @@ namespace APU___Astrophotorophy_Utilities
         //
         private void btn_Submit_Click(object sender, EventArgs e)
         {
+            CopyZipFolders RunRobocopy = new CopyZipFolders();
             RunRobocopy.RunRobocopy(txb_InputFolderPath.Text, txb_OutputFolderPath.Text);
             btn_SelectOutput.Visible = false;
             btn_SelectInput.Visible = false;
@@ -514,7 +520,6 @@ namespace APU___Astrophotorophy_Utilities
         private void btn_SelectNewDataInput_Click(object sender, EventArgs e)
         {
 
-            //MessageBox.Show("input selecte");
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 DriveInfo[] drives = DriveInfo.GetDrives();
@@ -570,7 +575,8 @@ namespace APU___Astrophotorophy_Utilities
             var strfullPath = txb_NewDataIOutput.Text;
             var strFolderName1 = Path.GetFileName(txb_NewDataInput.Text);
             NewData.VerifyDateFolders(txb_NewDataInput.Text, strFlag);
-            RunRobocopy.RunRobocopy(txb_InputFolderPath.Text, txb_OutputFolderPath.Text);
+            CopyZipFolders RunRobocopy = new CopyZipFolders();
+            RunRobocopy.RunRobocopy(txb_NewDataInput.Text, txb_NewDataIOutput.Text);
             btn_SelectOutput.Visible = false;
             btn_SelectInput.Visible = false;
             btn_Submit.Visible = false;
@@ -579,6 +585,7 @@ namespace APU___Astrophotorophy_Utilities
             txb_OutputFolderPath.Text = String.Empty;
             pnl_AddNewData.Visible = false;
             pnl_AddNewData.Hide();
+
         }
     }
     
