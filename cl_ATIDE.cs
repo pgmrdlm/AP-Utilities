@@ -18,7 +18,6 @@ namespace APU___Astrophotorophy_Utilities
         {
             db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
             var connectionString = db_ConnectionString.CreateConnectionString();
-            //var connectionString = db_Astro_Connection.db_connection;
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();

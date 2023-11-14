@@ -94,8 +94,6 @@ namespace APU___Astrophotorophy_Utilities
             if (cmb_SelectAction.SelectedIndex == 3)
             {
                 MessageBox.Show("Generate Reports");
-               // pnl_AddNewData.Visible = true;
-                //pnl_AddNewData.Show();
             }
 
         }
@@ -319,58 +317,44 @@ namespace APU___Astrophotorophy_Utilities
                 parLocation,
                 parBortle
                 );
-            if (bolAddOnly == true)
-            {
-                pnl_CopyFolders.Show();
-                pnl_CopyFolders.Enabled = true;
-                btn_SelectOutput.Visible = false;
-                btn_SelectInput.Visible = false;
-                txb_OutputFolderPath.Visible = false;
-                txb_InputFolderPath.Visible = false;
-                btn_Submit.Visible = false;
-                txb_InputFolderPath.Text = String.Empty;
-                txb_OutputFolderPath.Text = String.Empty;
-                cmb_SelectAction.SelectedIndex = -1;
+            //if (bolAddOnly == true)
+            //{
+            pnl_CopyFolders.Show();
+            pnl_CopyFolders.Enabled = true;
+            btn_SelectOutput.Visible = false;
+            btn_SelectInput.Visible = false;
+            txb_OutputFolderPath.Visible = false;
+            txb_InputFolderPath.Visible = false;
+            btn_Submit.Visible = false;
+            txb_InputFolderPath.Text = String.Empty;
+            txb_OutputFolderPath.Text = String.Empty;
+            cmb_SelectAction.SelectedIndex = -1;
+               
                 //dlm
-                cmb_MountName.Items.Clear();
-                cmb_ImageCamera.Items.Clear();
-                cmb_ImageLensTelescope.Items.Clear();
-                cmb_Filter.Items.Clear();
-                cmb_GuideCamera.Items.Clear();
-                cmb_GuideScope.Items.Clear();
-                cmb_Bortel.SelectedIndex = -1;
-                txb_Location.Clear();
-                btn_AddTarget.Visible = false;
-                ckb_AddOnly.Checked = false;
-                ckb_AddAndCopy.Checked = false;
-
-                return;
-            } else
-            {
-                pnl_CopyFolders.Show();
-                pnl_CopyFolders.Enabled = true;
-                btn_SelectOutput.Visible = true;
-                btn_SelectInput.Visible = true;
-                txb_InputFolderPath.Visible = true;
-                btn_SelectOutput.Visible = true;
-                txb_OutputFolderPath.Visible = true;
-                cmb_SelectAction.Visible = true;
-                btn_Submit.Visible = false;
-                cmb_SelectAction.SelectedIndex = -1;
-                //dlm
-                cmb_MountName.Items.Clear();
-                cmb_ImageCamera.Items.Clear();
-                cmb_ImageLensTelescope.Items.Clear();
-                cmb_Filter.Items.Clear();
-                cmb_GuideCamera.Items.Clear();
-                cmb_GuideScope.Items.Clear();
-                cmb_Bortel.SelectedIndex = -1;
-                txb_Location.Clear();
-                btn_AddTarget.Visible = false;
-                ckb_AddOnly.Checked = false;
-                ckb_AddAndCopy.Checked = false;
-                return;
-            }
+            cmb_MountName.Items.Clear();
+            cmb_ImageCamera.Items.Clear();
+            cmb_ImageLensTelescope.Items.Clear();
+            cmb_Filter.Items.Clear();
+            cmb_GuideCamera.Items.Clear();
+            cmb_GuideScope.Items.Clear();
+            cmb_Bortel.SelectedIndex = -1;
+            txb_Location.Clear();
+            btn_AddTarget.Visible = false;
+            ckb_AddOnly.Checked = false;
+            ckb_AddAndCopy.Checked = false;
+            grp_GuideEquipment.Visible = false;
+            grb_CamerasScopesAndFilter.Visible = false;
+            grb_TypeOfAction.Visible = false;
+            btn_AddTarget.Visible = false;
+            parMount = "";
+            parICamera = "";
+            parGCamera = "";
+            parLens = "";
+            parGScope = "";
+            parFilter = "";
+            parLocation = "";
+            parBortle = "";
+            return;
         }
 
         private void cmb_ImageCamera_SelectedIndexChanged(object sender, EventArgs e)
