@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cl%29_CreateConnectionString.cs" />
+    <Compile Include="cl_RestoireDB.cs" />
     <Compile Include="cl_createDB_Backup.cs" />
     <Compile Include="cl_ATIDE.cs" />
     <Compile Include="cl_NewTarget.cs" />
