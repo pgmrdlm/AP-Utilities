@@ -15,7 +15,7 @@ namespace APU___Astrophotorophy_Utilities
 {
     class db_ATI_Table
     {
-        public bool QueryATI(string strTargetName, string strEquipment)
+        public string QueryATI(string strTargetName, string strEquipment)
         {
 
             db_Create_ConnectionString db_ConnectionString = new db_Create_ConnectionString();
@@ -23,7 +23,7 @@ namespace APU___Astrophotorophy_Utilities
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
-                bool result = false;
+                var strFoundFlag = "TargetNotFound";
                 var CheckForTarget = ATI_Resources.CheckForTarget;
                 SQLiteCommand command = new SQLiteCommand(CheckForTarget, conn);
                 command.Parameters.Add(new SQLiteParameter("@Target", strTargetName));
@@ -35,34 +35,34 @@ namespace APU___Astrophotorophy_Utilities
 
                     if (TargetReader.HasRows)
                     {
-                        result = true;
+                        strFoundFlag = "TargetFound";
                         conn.Close();
                         conn.Dispose();
                         SQLiteConnection.ClearAllPools();
                         GC.Collect();
 
-                        return result;
+                        return strFoundFlag;
                     }
                     else
                     {
-                        result = false;
+                        strFoundFlag = "TargetNotFound";
                         conn.Close();
                         conn.Dispose();
                         SQLiteConnection.ClearAllPools();
                         GC.Collect();
 
-                        return result;
+                        return strFoundFlag;
                     }
                 }
-                  
-               
-                result = false;
+
+
+                strFoundFlag = "TargetNotFound";
                 conn.Close();
                 conn.Dispose();
                 SQLiteConnection.ClearAllPools();
                 GC.Collect();
 
-                return result;
+                return strFoundFlag;
             }
            
 

@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AP_Utilities));
             this.pnl_CopyFolders = new System.Windows.Forms.Panel();
-            this.grb_ZipFolders = new System.Windows.Forms.GroupBox();
-            this.txb_FolderToZip = new System.Windows.Forms.TextBox();
-            this.btn_SelectFolderToZip = new System.Windows.Forms.Button();
-            this.txb_FolderToZipTo = new System.Windows.Forms.TextBox();
-            this.btn_SubmitZip = new System.Windows.Forms.Button();
-            this.btn_OutPutZipTo = new System.Windows.Forms.Button();
-            this.grb_AddAndCopy = new System.Windows.Forms.GroupBox();
-            this.txb_InputFolderPath = new System.Windows.Forms.TextBox();
-            this.btn_SelectInput = new System.Windows.Forms.Button();
-            this.txb_OutputFolderPath = new System.Windows.Forms.TextBox();
-            this.btn_Submit = new System.Windows.Forms.Button();
-            this.btn_SelectOutput = new System.Windows.Forms.Button();
-            this.lbl_SelectAction = new System.Windows.Forms.Label();
-            this.cmb_SelectAction = new System.Windows.Forms.ComboBox();
             this.grb_AddNewData = new System.Windows.Forms.GroupBox();
             this.btn_AddNewData = new System.Windows.Forms.Button();
             this.txb_NewDataIOutput = new System.Windows.Forms.TextBox();
             this.btn_SelectNewDataOutput = new System.Windows.Forms.Button();
             this.txb_NewDataInput = new System.Windows.Forms.TextBox();
             this.btn_SelectNewDataInput = new System.Windows.Forms.Button();
+            this.grb_AddAndCopy = new System.Windows.Forms.GroupBox();
+            this.txb_InputFolderPath = new System.Windows.Forms.TextBox();
+            this.btn_SelectInput = new System.Windows.Forms.Button();
+            this.txb_OutputFolderPath = new System.Windows.Forms.TextBox();
+            this.btn_Submit = new System.Windows.Forms.Button();
+            this.btn_SelectOutput = new System.Windows.Forms.Button();
+            this.grb_ZipFolders = new System.Windows.Forms.GroupBox();
+            this.txb_FolderToZip = new System.Windows.Forms.TextBox();
+            this.btn_SelectFolderToZip = new System.Windows.Forms.Button();
+            this.txb_FolderToZipTo = new System.Windows.Forms.TextBox();
+            this.btn_SubmitZip = new System.Windows.Forms.Button();
+            this.btn_OutPutZipTo = new System.Windows.Forms.Button();
+            this.lbl_SelectAction = new System.Windows.Forms.Label();
+            this.cmb_SelectAction = new System.Windows.Forms.ComboBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.pnl_TargetAndEqipment = new System.Windows.Forms.Panel();
             this.grb_TargetAndMount = new System.Windows.Forms.GroupBox();
@@ -78,9 +78,9 @@
             this.cmb_ImageLensTelescope = new System.Windows.Forms.ComboBox();
             this.cmb_ImageCamera = new System.Windows.Forms.ComboBox();
             this.pnl_CopyFolders.SuspendLayout();
-            this.grb_ZipFolders.SuspendLayout();
-            this.grb_AddAndCopy.SuspendLayout();
             this.grb_AddNewData.SuspendLayout();
+            this.grb_AddAndCopy.SuspendLayout();
+            this.grb_ZipFolders.SuspendLayout();
             this.pnl_TargetAndEqipment.SuspendLayout();
             this.grb_TargetAndMount.SuspendLayout();
             this.grb_TypeOfAction.SuspendLayout();
@@ -101,73 +101,73 @@
             this.pnl_CopyFolders.TabIndex = 1;
             this.pnl_CopyFolders.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_CopyImageData_Paint);
             // 
-            // grb_ZipFolders
+            // grb_AddNewData
             // 
-            this.grb_ZipFolders.Controls.Add(this.txb_FolderToZip);
-            this.grb_ZipFolders.Controls.Add(this.btn_SelectFolderToZip);
-            this.grb_ZipFolders.Controls.Add(this.txb_FolderToZipTo);
-            this.grb_ZipFolders.Controls.Add(this.btn_SubmitZip);
-            this.grb_ZipFolders.Controls.Add(this.btn_OutPutZipTo);
-            this.grb_ZipFolders.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grb_ZipFolders.ForeColor = System.Drawing.Color.DarkRed;
-            this.grb_ZipFolders.Location = new System.Drawing.Point(30, 81);
-            this.grb_ZipFolders.Name = "grb_ZipFolders";
-            this.grb_ZipFolders.Size = new System.Drawing.Size(887, 148);
-            this.grb_ZipFolders.TabIndex = 7;
-            this.grb_ZipFolders.TabStop = false;
-            this.grb_ZipFolders.Text = "Zip up Data Folders";
-            this.grb_ZipFolders.Visible = false;
+            this.grb_AddNewData.Controls.Add(this.btn_AddNewData);
+            this.grb_AddNewData.Controls.Add(this.txb_NewDataIOutput);
+            this.grb_AddNewData.Controls.Add(this.btn_SelectNewDataOutput);
+            this.grb_AddNewData.Controls.Add(this.txb_NewDataInput);
+            this.grb_AddNewData.Controls.Add(this.btn_SelectNewDataInput);
+            this.grb_AddNewData.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grb_AddNewData.ForeColor = System.Drawing.Color.DarkRed;
+            this.grb_AddNewData.Location = new System.Drawing.Point(20, 81);
+            this.grb_AddNewData.Name = "grb_AddNewData";
+            this.grb_AddNewData.Size = new System.Drawing.Size(1025, 245);
+            this.grb_AddNewData.TabIndex = 0;
+            this.grb_AddNewData.TabStop = false;
+            this.grb_AddNewData.Text = "Add new Data to Existing Target";
+            this.grb_AddNewData.Visible = false;
             // 
-            // txb_FolderToZip
+            // btn_AddNewData
             // 
-            this.txb_FolderToZip.Location = new System.Drawing.Point(193, 23);
-            this.txb_FolderToZip.Name = "txb_FolderToZip";
-            this.txb_FolderToZip.ReadOnly = true;
-            this.txb_FolderToZip.Size = new System.Drawing.Size(602, 22);
-            this.txb_FolderToZip.TabIndex = 1;
+            this.btn_AddNewData.Location = new System.Drawing.Point(138, 109);
+            this.btn_AddNewData.Name = "btn_AddNewData";
+            this.btn_AddNewData.Size = new System.Drawing.Size(100, 23);
+            this.btn_AddNewData.TabIndex = 2;
+            this.btn_AddNewData.Text = "Add Data";
+            this.btn_AddNewData.UseVisualStyleBackColor = true;
+            this.btn_AddNewData.Visible = false;
+            this.btn_AddNewData.Click += new System.EventHandler(this.btn_AddNewData_Click);
             // 
-            // btn_SelectFolderToZip
+            // txb_NewDataIOutput
             // 
-            this.btn_SelectFolderToZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SelectFolderToZip.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_SelectFolderToZip.Location = new System.Drawing.Point(54, 23);
-            this.btn_SelectFolderToZip.Name = "btn_SelectFolderToZip";
-            this.btn_SelectFolderToZip.Size = new System.Drawing.Size(127, 23);
-            this.btn_SelectFolderToZip.TabIndex = 0;
-            this.btn_SelectFolderToZip.Text = "Select Input";
+            this.txb_NewDataIOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_NewDataIOutput.Location = new System.Drawing.Point(138, 67);
+            this.txb_NewDataIOutput.Name = "txb_NewDataIOutput";
+            this.txb_NewDataIOutput.ReadOnly = true;
+            this.txb_NewDataIOutput.Size = new System.Drawing.Size(851, 22);
+            this.txb_NewDataIOutput.TabIndex = 1;
+            this.txb_NewDataIOutput.Visible = false;
             // 
-            // txb_FolderToZipTo
+            // btn_SelectNewDataOutput
             // 
-            this.txb_FolderToZipTo.Location = new System.Drawing.Point(193, 51);
-            this.txb_FolderToZipTo.Name = "txb_FolderToZipTo";
-            this.txb_FolderToZipTo.ReadOnly = true;
-            this.txb_FolderToZipTo.Size = new System.Drawing.Size(602, 22);
-            this.txb_FolderToZipTo.TabIndex = 1;
-            this.txb_FolderToZipTo.Visible = false;
+            this.btn_SelectNewDataOutput.Location = new System.Drawing.Point(7, 67);
+            this.btn_SelectNewDataOutput.Name = "btn_SelectNewDataOutput";
+            this.btn_SelectNewDataOutput.Size = new System.Drawing.Size(108, 23);
+            this.btn_SelectNewDataOutput.TabIndex = 0;
+            this.btn_SelectNewDataOutput.Text = "Select Output";
+            this.btn_SelectNewDataOutput.UseVisualStyleBackColor = true;
+            this.btn_SelectNewDataOutput.Visible = false;
+            this.btn_SelectNewDataOutput.Click += new System.EventHandler(this.btn_SelectNewDataOutput_Click);
             // 
-            // btn_SubmitZip
+            // txb_NewDataInput
             // 
-            this.btn_SubmitZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SubmitZip.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_SubmitZip.Location = new System.Drawing.Point(193, 94);
-            this.btn_SubmitZip.Name = "btn_SubmitZip";
-            this.btn_SubmitZip.Size = new System.Drawing.Size(107, 23);
-            this.btn_SubmitZip.TabIndex = 3;
-            this.btn_SubmitZip.Text = "Zip Folder";
-            this.btn_SubmitZip.UseVisualStyleBackColor = true;
-            this.btn_SubmitZip.Visible = false;
+            this.txb_NewDataInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_NewDataInput.Location = new System.Drawing.Point(138, 35);
+            this.txb_NewDataInput.Name = "txb_NewDataInput";
+            this.txb_NewDataInput.ReadOnly = true;
+            this.txb_NewDataInput.Size = new System.Drawing.Size(851, 22);
+            this.txb_NewDataInput.TabIndex = 1;
             // 
-            // btn_OutPutZipTo
+            // btn_SelectNewDataInput
             // 
-            this.btn_OutPutZipTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_OutPutZipTo.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_OutPutZipTo.Location = new System.Drawing.Point(54, 53);
-            this.btn_OutPutZipTo.Name = "btn_OutPutZipTo";
-            this.btn_OutPutZipTo.Size = new System.Drawing.Size(127, 23);
-            this.btn_OutPutZipTo.TabIndex = 2;
-            this.btn_OutPutZipTo.Text = "Select Output";
-            this.btn_OutPutZipTo.UseVisualStyleBackColor = true;
-            this.btn_OutPutZipTo.Visible = false;
+            this.btn_SelectNewDataInput.Location = new System.Drawing.Point(7, 35);
+            this.btn_SelectNewDataInput.Name = "btn_SelectNewDataInput";
+            this.btn_SelectNewDataInput.Size = new System.Drawing.Size(108, 23);
+            this.btn_SelectNewDataInput.TabIndex = 0;
+            this.btn_SelectNewDataInput.Text = "Select Data Folder";
+            this.btn_SelectNewDataInput.UseVisualStyleBackColor = true;
+            this.btn_SelectNewDataInput.Click += new System.EventHandler(this.btn_SelectNewDataInput_Click);
             // 
             // grb_AddAndCopy
             // 
@@ -240,6 +240,74 @@
             this.btn_SelectOutput.Visible = false;
             this.btn_SelectOutput.Click += new System.EventHandler(this.btn_SelectOutput_Click);
             // 
+            // grb_ZipFolders
+            // 
+            this.grb_ZipFolders.Controls.Add(this.txb_FolderToZip);
+            this.grb_ZipFolders.Controls.Add(this.btn_SelectFolderToZip);
+            this.grb_ZipFolders.Controls.Add(this.txb_FolderToZipTo);
+            this.grb_ZipFolders.Controls.Add(this.btn_SubmitZip);
+            this.grb_ZipFolders.Controls.Add(this.btn_OutPutZipTo);
+            this.grb_ZipFolders.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grb_ZipFolders.ForeColor = System.Drawing.Color.DarkRed;
+            this.grb_ZipFolders.Location = new System.Drawing.Point(30, 81);
+            this.grb_ZipFolders.Name = "grb_ZipFolders";
+            this.grb_ZipFolders.Size = new System.Drawing.Size(887, 148);
+            this.grb_ZipFolders.TabIndex = 7;
+            this.grb_ZipFolders.TabStop = false;
+            this.grb_ZipFolders.Text = "Zip up Data Folders";
+            this.grb_ZipFolders.Visible = false;
+            // 
+            // txb_FolderToZip
+            // 
+            this.txb_FolderToZip.Location = new System.Drawing.Point(193, 23);
+            this.txb_FolderToZip.Name = "txb_FolderToZip";
+            this.txb_FolderToZip.ReadOnly = true;
+            this.txb_FolderToZip.Size = new System.Drawing.Size(602, 22);
+            this.txb_FolderToZip.TabIndex = 1;
+            // 
+            // btn_SelectFolderToZip
+            // 
+            this.btn_SelectFolderToZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SelectFolderToZip.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_SelectFolderToZip.Location = new System.Drawing.Point(54, 23);
+            this.btn_SelectFolderToZip.Name = "btn_SelectFolderToZip";
+            this.btn_SelectFolderToZip.Size = new System.Drawing.Size(127, 23);
+            this.btn_SelectFolderToZip.TabIndex = 0;
+            this.btn_SelectFolderToZip.Text = "Select Input";
+            // 
+            // txb_FolderToZipTo
+            // 
+            this.txb_FolderToZipTo.Location = new System.Drawing.Point(193, 51);
+            this.txb_FolderToZipTo.Name = "txb_FolderToZipTo";
+            this.txb_FolderToZipTo.ReadOnly = true;
+            this.txb_FolderToZipTo.Size = new System.Drawing.Size(602, 22);
+            this.txb_FolderToZipTo.TabIndex = 1;
+            this.txb_FolderToZipTo.Visible = false;
+            // 
+            // btn_SubmitZip
+            // 
+            this.btn_SubmitZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SubmitZip.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_SubmitZip.Location = new System.Drawing.Point(193, 94);
+            this.btn_SubmitZip.Name = "btn_SubmitZip";
+            this.btn_SubmitZip.Size = new System.Drawing.Size(107, 23);
+            this.btn_SubmitZip.TabIndex = 3;
+            this.btn_SubmitZip.Text = "Zip Folder";
+            this.btn_SubmitZip.UseVisualStyleBackColor = true;
+            this.btn_SubmitZip.Visible = false;
+            // 
+            // btn_OutPutZipTo
+            // 
+            this.btn_OutPutZipTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_OutPutZipTo.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_OutPutZipTo.Location = new System.Drawing.Point(54, 53);
+            this.btn_OutPutZipTo.Name = "btn_OutPutZipTo";
+            this.btn_OutPutZipTo.Size = new System.Drawing.Size(127, 23);
+            this.btn_OutPutZipTo.TabIndex = 2;
+            this.btn_OutPutZipTo.Text = "Select Output";
+            this.btn_OutPutZipTo.UseVisualStyleBackColor = true;
+            this.btn_OutPutZipTo.Visible = false;
+            // 
             // lbl_SelectAction
             // 
             this.lbl_SelectAction.AutoSize = true;
@@ -266,74 +334,6 @@
             this.cmb_SelectAction.Size = new System.Drawing.Size(264, 24);
             this.cmb_SelectAction.TabIndex = 4;
             this.cmb_SelectAction.SelectedIndexChanged += new System.EventHandler(this.cmb_SelectAction_SelectedIndexChanged_1);
-            // 
-            // grb_AddNewData
-            // 
-            this.grb_AddNewData.Controls.Add(this.btn_AddNewData);
-            this.grb_AddNewData.Controls.Add(this.txb_NewDataIOutput);
-            this.grb_AddNewData.Controls.Add(this.btn_SelectNewDataOutput);
-            this.grb_AddNewData.Controls.Add(this.txb_NewDataInput);
-            this.grb_AddNewData.Controls.Add(this.btn_SelectNewDataInput);
-            this.grb_AddNewData.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grb_AddNewData.ForeColor = System.Drawing.Color.DarkRed;
-            this.grb_AddNewData.Location = new System.Drawing.Point(20, 81);
-            this.grb_AddNewData.Name = "grb_AddNewData";
-            this.grb_AddNewData.Size = new System.Drawing.Size(1025, 245);
-            this.grb_AddNewData.TabIndex = 0;
-            this.grb_AddNewData.TabStop = false;
-            this.grb_AddNewData.Text = "Add new Data to Existing Target";
-            this.grb_AddNewData.Visible = false;
-            // 
-            // btn_AddNewData
-            // 
-            this.btn_AddNewData.Location = new System.Drawing.Point(138, 109);
-            this.btn_AddNewData.Name = "btn_AddNewData";
-            this.btn_AddNewData.Size = new System.Drawing.Size(100, 23);
-            this.btn_AddNewData.TabIndex = 2;
-            this.btn_AddNewData.Text = "Add Data";
-            this.btn_AddNewData.UseVisualStyleBackColor = true;
-            this.btn_AddNewData.Visible = false;
-            this.btn_AddNewData.Click += new System.EventHandler(this.btn_AddNewData_Click);
-            // 
-            // txb_NewDataIOutput
-            // 
-            this.txb_NewDataIOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_NewDataIOutput.Location = new System.Drawing.Point(138, 67);
-            this.txb_NewDataIOutput.Name = "txb_NewDataIOutput";
-            this.txb_NewDataIOutput.ReadOnly = true;
-            this.txb_NewDataIOutput.Size = new System.Drawing.Size(851, 22);
-            this.txb_NewDataIOutput.TabIndex = 1;
-            this.txb_NewDataIOutput.Visible = false;
-            // 
-            // btn_SelectNewDataOutput
-            // 
-            this.btn_SelectNewDataOutput.Location = new System.Drawing.Point(7, 67);
-            this.btn_SelectNewDataOutput.Name = "btn_SelectNewDataOutput";
-            this.btn_SelectNewDataOutput.Size = new System.Drawing.Size(108, 23);
-            this.btn_SelectNewDataOutput.TabIndex = 0;
-            this.btn_SelectNewDataOutput.Text = "Select Output";
-            this.btn_SelectNewDataOutput.UseVisualStyleBackColor = true;
-            this.btn_SelectNewDataOutput.Visible = false;
-            this.btn_SelectNewDataOutput.Click += new System.EventHandler(this.btn_SelectNewDataOutput_Click);
-            // 
-            // txb_NewDataInput
-            // 
-            this.txb_NewDataInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_NewDataInput.Location = new System.Drawing.Point(138, 35);
-            this.txb_NewDataInput.Name = "txb_NewDataInput";
-            this.txb_NewDataInput.ReadOnly = true;
-            this.txb_NewDataInput.Size = new System.Drawing.Size(851, 22);
-            this.txb_NewDataInput.TabIndex = 1;
-            // 
-            // btn_SelectNewDataInput
-            // 
-            this.btn_SelectNewDataInput.Location = new System.Drawing.Point(7, 35);
-            this.btn_SelectNewDataInput.Name = "btn_SelectNewDataInput";
-            this.btn_SelectNewDataInput.Size = new System.Drawing.Size(108, 23);
-            this.btn_SelectNewDataInput.TabIndex = 0;
-            this.btn_SelectNewDataInput.Text = "Select Data Folder";
-            this.btn_SelectNewDataInput.UseVisualStyleBackColor = true;
-            this.btn_SelectNewDataInput.Click += new System.EventHandler(this.btn_SelectNewDataInput_Click);
             // 
             // pnl_TargetAndEqipment
             // 
@@ -651,12 +651,12 @@
             this.Load += new System.EventHandler(this.frm_AP_Utilities_Load);
             this.pnl_CopyFolders.ResumeLayout(false);
             this.pnl_CopyFolders.PerformLayout();
-            this.grb_ZipFolders.ResumeLayout(false);
-            this.grb_ZipFolders.PerformLayout();
-            this.grb_AddAndCopy.ResumeLayout(false);
-            this.grb_AddAndCopy.PerformLayout();
             this.grb_AddNewData.ResumeLayout(false);
             this.grb_AddNewData.PerformLayout();
+            this.grb_AddAndCopy.ResumeLayout(false);
+            this.grb_AddAndCopy.PerformLayout();
+            this.grb_ZipFolders.ResumeLayout(false);
+            this.grb_ZipFolders.PerformLayout();
             this.pnl_TargetAndEqipment.ResumeLayout(false);
             this.grb_TargetAndMount.ResumeLayout(false);
             this.grb_TargetAndMount.PerformLayout();

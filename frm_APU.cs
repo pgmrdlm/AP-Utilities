@@ -75,6 +75,9 @@ namespace APU___Astrophotorophy_Utilities
             {
                 pnl_CopyFolders.Visible = true;
                 pnl_CopyFolders.Show();
+                txb_InputFolderPath.Visible = true;
+                txb_InputFolderPath.Clear();
+                btn_SelectInput.Visible = true;
                 grb_AddAndCopy.Visible = true;
                 grb_AddNewData.Visible = false;
                 grb_ZipFolders.Visible = false;
@@ -186,7 +189,7 @@ namespace APU___Astrophotorophy_Utilities
                 {
                     strFolderName1 = Path.GetFileName(txb_InputFolderPath.Text);
                     VerifyFolders CheckEquipmentFolders = new VerifyFolders();
-                    bool bolValidEquipment = CheckEquipmentFolders.VerifyEquipmentFolders(txb_InputFolderPath.Text);
+                    string strCheckEquipment = CheckEquipmentFolders.VerifyEquipmentFolders(txb_InputFolderPath.Text);
                     //
                     // Panel 1 - The input folder that was selected is a target folder and is not
                     // currently recorded on the database.
@@ -241,7 +244,7 @@ namespace APU___Astrophotorophy_Utilities
 
                     } else
                     {
-                        if (bolValidEquipment == false)
+                        if (strCheckEquipment == "Invalid Equipment" )
                         {
                             MessageBox.Show("Invalid Equipment");
                             return;
@@ -260,6 +263,7 @@ namespace APU___Astrophotorophy_Utilities
                     btn_SelectInput.Visible = false;
                     txb_OutputFolderPath.Visible = false;
                     btn_SelectOutput.Visible = false;
+                    grb_AddAndCopy.Visible = false;
                     cmb_SelectAction.SelectedIndex = -1;
                     return;
                 }
@@ -356,6 +360,7 @@ namespace APU___Astrophotorophy_Utilities
             pnl_CopyFolders.Enabled = true;
             btn_SelectOutput.Visible = false;
             btn_SelectInput.Visible = false;
+            grb_AddAndCopy.Visible = false;
             txb_OutputFolderPath.Visible = false;
             txb_InputFolderPath.Visible = false;
             btn_Submit.Visible = false;

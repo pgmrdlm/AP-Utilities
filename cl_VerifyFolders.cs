@@ -17,7 +17,7 @@ namespace APU___Astrophotorophy_Utilities
 
         public List<string> lstEquipment = new List<string>();
 
-        public bool VerifyEquipmentFolders(string strInputFolderPath)
+        public string VerifyEquipmentFolders(string strInputFolderPath)
         {
             // Targets can be imaged different times with different equipment which can be determined by the 
             // directories directly under the target main folder.  Grab all these folder names to see if this
@@ -34,11 +34,11 @@ namespace APU___Astrophotorophy_Utilities
                 {
                     var strTargetName = Path.GetFileName(strInputFolderPath);
                     db_ATI_Table ATI_Table = new db_ATI_Table();
-                    bool bolEquipmentExists = ATI_Table.QueryATI(strTargetName, arrDirectories[i]);
-                    if (bolEquipmentExists == true)
+                    string strFoundFlag = ATI_Table.QueryATI(strTargetName, arrDirectories[i]);
+                    if (strFoundFlag == "TargetFound")
                     {
-                        bolValidEquipment = false;
-                        return bolValidEquipment;
+                        //bolValidEquipment = false;
+                        return strFoundFlag;
 
                     }
                    //
@@ -47,17 +47,17 @@ namespace APU___Astrophotorophy_Utilities
                    var strfullPath = Path.Combine(paths);
                    int intReturnedDateCount = CheckDateFolders.VerifyDateFolders(strfullPath);
                    lstEquipment.Add(arrDirectories[i]);
-                   bolValidEquipment = true;
-                    return bolValidEquipment;
+                   //bolValidEquipment = true;
+                   strFoundFlag = "Valid Equipment";
+                   return strFoundFlag;
                 } else
                 {
                     MessageBox.Show("Target sub folder " + arrDirectories[i] + " Is not a valid equipment name");
-                    bolValidEquipment = false;
-                    return bolValidEquipment;
+                    return "Invalid Equipment";
                 }
             }
             bool bolcrap = false;
-            return bolcrap;
+            return "Invalid Equipment";
         }
         //  }
         public int VerifyDateFolders(string strFullDatePath)
