@@ -4,7 +4,7 @@
   <description asmv2:iconFile="APU_Desktop_Icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="APU - Astrophotorophy Utilities" version="1.0.8720.15975" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="APU - Astrophotorophy Utilities" version="2.0.1.8" language="neutral" processorArchitecture="msil" />
     <commandLine file="APU - Astrophotorophy Utilities.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -44,13 +44,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="APU - Astrophotorophy Utilities.exe" size="57768">
-      <assemblyIdentity name="APU - Astrophotorophy Utilities" version="1.0.8720.15975" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="APU - Astrophotorophy Utilities" version="2.0.1.8" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v8ymI3mhukblS+IBDArv5UubZQFXdW0jIQlcSBKz3hI=</dsig:DigestValue>
+        <dsig:DigestValue>SS2x/GOu6Jaz2cLGjMkUUN+FrUgWlzffve/m4086Ks4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
