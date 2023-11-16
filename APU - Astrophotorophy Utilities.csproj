@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
+    <Deterministic>false</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -112,7 +112,7 @@
     <Compile Include="cl_ATID_Table.cs" />
     <Compile Include="cl_AE.cs" />
     <Compile Include="cl_ATI_Table.cs" />
-    <Compile Include="cl_CopyZipFolders.cs" />
+    <Compile Include="cl_RobocopyData.cs" />
     <Compile Include="frm_DB_Maintenance.cs">
       <SubType>Form</SubType>
     </Compile>

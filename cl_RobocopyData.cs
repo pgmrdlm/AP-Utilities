@@ -11,7 +11,7 @@ using System.Net.NetworkInformation;
 
 namespace APU___Astrophotorophy_Utilities
 {
-    internal class CopyZipFolders
+    internal class RobocopyDataFolders
     {
         /*CopyFolders - Class used to robocopy folders of image data.  If additional options are provided
         output folders will be compressed withy 7-zip and or the input folder will be deleted. 

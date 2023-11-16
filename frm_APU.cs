@@ -27,7 +27,7 @@ namespace APU___Astrophotorophy_Utilities
         }
 
        
-        //CopyZipFolders RunRobocopy = new CopyZipFolders();
+        //RobocopyDataFolders RunRobocopy = new RobocopyDataFolders();
         
         public string parMount;
         public string parICamera;
@@ -68,30 +68,63 @@ namespace APU___Astrophotorophy_Utilities
         //
         private void cmb_SelectAction_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            
+            // 
+            // New Target to add to db and/or copy
+            //
             if (cmb_SelectAction.SelectedIndex == 0)
             {
                 pnl_CopyFolders.Visible = true;
                 pnl_CopyFolders.Show();
+                grb_AddAndCopy.Visible = true;
+                grb_AddNewData.Visible = false;
+                grb_ZipFolders.Visible = false;
+
+
                 pnl_TargetAndEqipment.Visible = false;
                 pnl_TargetAndEqipment.Hide();
-                pnl_AddNewData.Visible = false;
-                pnl_AddNewData.Hide();
-                txb_InputFolderPath.Visible = true;
-                btn_SelectInput.Visible = true;
             }
+            //
+            //Add additional Data for existing target
             if (cmb_SelectAction.SelectedIndex == 1)
             {
-                pnl_AddNewData.Visible = true;
-                pnl_AddNewData.Show();
+                grb_AddNewData.Visible = true;
+                grb_AddAndCopy.Visible = false;
+                pnl_CopyFolders.Visible = true;
+                grb_ZipFolders.Visible = false;
+                pnl_CopyFolders.Show();
+
+                pnl_TargetAndEqipment.Visible = false;
+                pnl_TargetAndEqipment.Hide();
+
             }
+            //
+            // Zip up Data Folders
             if (cmb_SelectAction.SelectedIndex == 2)
+            {
+                grb_ZipFolders.Visible = true;
+                grb_AddAndCopy.Visible = false;
+                grb_AddNewData.Visible = false;
+                pnl_CopyFolders.Visible = true;
+                pnl_CopyFolders.Show();
+
+                pnl_TargetAndEqipment.Visible = false;
+                pnl_TargetAndEqipment.Hide();
+            }
+            // DB Maintenance
+            if (cmb_SelectAction.SelectedIndex == 3)
             {
                 frm_DB_Maint frm_DB_Maintenance  = new frm_DB_Maint();
                 frm_DB_Maintenance.ShowDialog();
                 cmb_SelectAction.SelectedIndex = -1;
+                pnl_CopyFolders.Visible = true;
+                pnl_CopyFolders.Show();
+                grb_AddAndCopy.Visible = false;
+                grb_AddNewData.Visible = false;
+                grb_ZipFolders.Visible = false;
             }
-            if (cmb_SelectAction.SelectedIndex == 3)
+            //
+            // Generate Reports
+            if (cmb_SelectAction.SelectedIndex == 4)
             {
                 MessageBox.Show("Generate Reports");
             }
@@ -252,7 +285,7 @@ namespace APU___Astrophotorophy_Utilities
         //
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            CopyZipFolders RunRobocopy = new CopyZipFolders();
+            RobocopyDataFolders RunRobocopy = new RobocopyDataFolders();
             RunRobocopy.RunRobocopy(txb_InputFolderPath.Text, txb_OutputFolderPath.Text);
             btn_SelectOutput.Visible = false;
             btn_SelectInput.Visible = false;
@@ -559,7 +592,7 @@ namespace APU___Astrophotorophy_Utilities
             var strfullPath = txb_NewDataIOutput.Text;
             var strFolderName1 = Path.GetFileName(txb_NewDataInput.Text);
             NewData.VerifyDateFolders(txb_NewDataInput.Text, strFlag);
-            CopyZipFolders RunRobocopy = new CopyZipFolders();
+            RobocopyDataFolders RunRobocopy = new RobocopyDataFolders();
             RunRobocopy.RunRobocopy(txb_NewDataInput.Text, txb_NewDataIOutput.Text);
             btn_SelectOutput.Visible = false;
             btn_SelectInput.Visible = false;
@@ -567,8 +600,8 @@ namespace APU___Astrophotorophy_Utilities
             cmb_SelectAction.SelectedIndex = -1;
             txb_InputFolderPath.Text = String.Empty;
             txb_OutputFolderPath.Text = String.Empty;
-            pnl_AddNewData.Visible = false;
-            pnl_AddNewData.Hide();
+           // pnl_AddNewData.Visible = false;
+           // pnl_AddNewData.Hide();
 
         }
     }
