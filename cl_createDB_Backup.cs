@@ -30,8 +30,25 @@ namespace APU___Astrophotorophy_Utilities
             {
                 MessageBox.Show("DB backup failed");
             }
+            DirectoryInfo strBackupDir = new DirectoryInfo(strfullPath);
+            FileInfo[] arrBackupFiles = strBackupDir.GetFiles("bk_*.db"); //Getting Text files
+            for (int i = 0; i < arrBackupFiles.Length; i++)
+            {
+                string str = "";
+                if (i > 9)
+                {
+                    
+                    var strFileToDelete = arrBackupFiles[i].ToString();
+                    strAppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                    string[] strWorkPath1 = { strAppDataFolder, "APU Data", strFileToDelete };
+                    var strPathForDelete = Path.Combine(strWorkPath1);
+                    File.Delete(strPathForDelete);
+                }
 
-           
+                // File.Delete(f);
+            }
+
+
         }
     }
 

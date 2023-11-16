@@ -16,15 +16,15 @@ namespace APU___Astrophotorophy_Utilities
             var strAppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string[] strWorkPath = { strAppDataFolder, "APU Data" };
             var strfullPath = Path.Combine(strWorkPath);
+
             try
             {
                 File.Copy(Path.Combine(strfullPath, strRestoreFile), Path.Combine(strfullPath, "Astrophotography.db"), true);
             }
             catch
             {
-                MessageBox.Show("DB restore failed");
             }
-
+           
 
         }
     }
