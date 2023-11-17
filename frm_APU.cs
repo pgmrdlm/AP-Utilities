@@ -609,6 +609,61 @@ namespace APU___Astrophotorophy_Utilities
            // pnl_AddNewData.Hide();
 
         }
+
+        private void txb_NewDataInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_SelectFolderToZip_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                DriveInfo[] drives = DriveInfo.GetDrives();
+                txb_FolderToZip.Text = folderBrowserDialog1.SelectedPath;
+                for (int i = 0; i < drives.Count(); i++)
+                {
+                    string strtest = drives[i].Name;
+                    if (txb_FolderToZip.Text == drives[i].Name)
+                    {
+                        string strMsgBoxTitle = "Select a folder for input";
+                        string strMsgBoxMsg = "You must choose a folder and not a drive letter." +
+                            "\n" +
+                            "Please make another selection";
+                        MessageBoxButtons btnButtons = MessageBoxButtons.OK;
+                        MessageBox.Show(strMsgBoxMsg, strMsgBoxTitle, btnButtons, MessageBoxIcon.Error);
+                        txb_FolderToZip.Text = String.Empty;
+                        return;
+                    }
+                }
+                //
+                btn_OutPutZipTo.Visible = true;
+                txb_FolderToZipTo.Visible = true;
+            }
+        }
+        private void btn_OutPutZipTo_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                txb_FolderToZipTo.Text = folderBrowserDialog1.SelectedPath;
+                btn_SubmitZip.Visible = true;
+            }
+        }
+        private void btn_SubmitZip_Click(object sender, EventArgs e)
+        {
+            ArchiveFolders Run7Zip = new ArchiveFolders();
+            Run7Zip.Run7Zip(txb_FolderToZip.Text, txb_FolderToZipTo.Text);
+            btn_OutPutZipTo.Visible = false;
+            txb_FolderToZipTo.Visible = false;
+            txb_FolderToZipTo.Clear();
+            btn_SelectFolderToZip.Visible = false;
+            txb_FolderToZip.Visible = false;
+            txb_FolderToZip.Clear();
+            grb_ZipFolders.Visible = false;
+            btn_SubmitZip.Visible = false;
+        }
+
+
     }
     
 }

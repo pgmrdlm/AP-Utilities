@@ -37,7 +37,7 @@ namespace APU___Astrophotorophy_Utilities
                 string str = "";
                 if (i > 9)
                 {
-                    
+
                     var strFileToDelete = arrBackupFiles[i].ToString();
                     strAppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                     string[] strWorkPath1 = { strAppDataFolder, "APU Data", strFileToDelete };
@@ -47,7 +47,6 @@ namespace APU___Astrophotorophy_Utilities
 
                 // File.Delete(f);
             }
-
 
         }
     }

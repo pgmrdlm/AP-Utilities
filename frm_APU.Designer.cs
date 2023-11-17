@@ -90,9 +90,9 @@
             // 
             // pnl_CopyFolders
             // 
+            this.pnl_CopyFolders.Controls.Add(this.grb_ZipFolders);
             this.pnl_CopyFolders.Controls.Add(this.grb_AddNewData);
             this.pnl_CopyFolders.Controls.Add(this.grb_AddAndCopy);
-            this.pnl_CopyFolders.Controls.Add(this.grb_ZipFolders);
             this.pnl_CopyFolders.Controls.Add(this.lbl_SelectAction);
             this.pnl_CopyFolders.Controls.Add(this.cmb_SelectAction);
             this.pnl_CopyFolders.Location = new System.Drawing.Point(12, 11);
@@ -158,6 +158,7 @@
             this.txb_NewDataInput.ReadOnly = true;
             this.txb_NewDataInput.Size = new System.Drawing.Size(851, 22);
             this.txb_NewDataInput.TabIndex = 1;
+            this.txb_NewDataInput.TextChanged += new System.EventHandler(this.txb_NewDataInput_TextChanged);
             // 
             // btn_SelectNewDataInput
             // 
@@ -249,16 +250,17 @@
             this.grb_ZipFolders.Controls.Add(this.btn_OutPutZipTo);
             this.grb_ZipFolders.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_ZipFolders.ForeColor = System.Drawing.Color.DarkRed;
-            this.grb_ZipFolders.Location = new System.Drawing.Point(30, 81);
+            this.grb_ZipFolders.Location = new System.Drawing.Point(26, 74);
             this.grb_ZipFolders.Name = "grb_ZipFolders";
             this.grb_ZipFolders.Size = new System.Drawing.Size(887, 148);
             this.grb_ZipFolders.TabIndex = 7;
             this.grb_ZipFolders.TabStop = false;
-            this.grb_ZipFolders.Text = "Zip up Data Folders";
+            this.grb_ZipFolders.Text = "Archive Data Folders";
             this.grb_ZipFolders.Visible = false;
             // 
             // txb_FolderToZip
             // 
+            this.txb_FolderToZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_FolderToZip.Location = new System.Drawing.Point(193, 23);
             this.txb_FolderToZip.Name = "txb_FolderToZip";
             this.txb_FolderToZip.ReadOnly = true;
@@ -274,9 +276,11 @@
             this.btn_SelectFolderToZip.Size = new System.Drawing.Size(127, 23);
             this.btn_SelectFolderToZip.TabIndex = 0;
             this.btn_SelectFolderToZip.Text = "Select Input";
+            this.btn_SelectFolderToZip.Click += new System.EventHandler(this.btn_SelectFolderToZip_Click);
             // 
             // txb_FolderToZipTo
             // 
+            this.txb_FolderToZipTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_FolderToZipTo.Location = new System.Drawing.Point(193, 51);
             this.txb_FolderToZipTo.Name = "txb_FolderToZipTo";
             this.txb_FolderToZipTo.ReadOnly = true;
@@ -292,9 +296,10 @@
             this.btn_SubmitZip.Name = "btn_SubmitZip";
             this.btn_SubmitZip.Size = new System.Drawing.Size(107, 23);
             this.btn_SubmitZip.TabIndex = 3;
-            this.btn_SubmitZip.Text = "Zip Folder";
+            this.btn_SubmitZip.Text = "Archive";
             this.btn_SubmitZip.UseVisualStyleBackColor = true;
             this.btn_SubmitZip.Visible = false;
+            this.btn_SubmitZip.Click += new System.EventHandler(this.btn_SubmitZip_Click);
             // 
             // btn_OutPutZipTo
             // 
@@ -307,6 +312,7 @@
             this.btn_OutPutZipTo.Text = "Select Output";
             this.btn_OutPutZipTo.UseVisualStyleBackColor = true;
             this.btn_OutPutZipTo.Visible = false;
+            this.btn_OutPutZipTo.Click += new System.EventHandler(this.btn_OutPutZipTo_Click);
             // 
             // lbl_SelectAction
             // 
@@ -326,7 +332,7 @@
             this.cmb_SelectAction.Items.AddRange(new object[] {
             "New Target to add to db and/or copy",
             "Add additional Data for existing target",
-            "Zip up Data Folders",
+            "Archive Data Folders",
             "DB Maintenance",
             "Generate Reports"});
             this.cmb_SelectAction.Location = new System.Drawing.Point(23, 44);

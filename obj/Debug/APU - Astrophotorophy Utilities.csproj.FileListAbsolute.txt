@@ -104,3 +104,8 @@ C:\Users\pgmrdlm\Desktop\AP-Utilities\obj\Debug\APU - Astrophotorophy Utilities.
 C:\Users\pgmrdlm\Desktop\AP-Utilities\obj\Debug\APU - Astrophotorophy Utilities.pdb
 C:\Users\pgmrdlm\Desktop\AP-Utilities\bin\Debug\Astrophotography.db
 C:\Users\pgmrdlm\Desktop\AP-Utilities\obj\Debug\APU___Astrophotorophy_Utilities.frm_DB_Maint.resources
+C:\Users\pgmrdlm\Desktop\AP-Utilities\bin\Debug\Aspose.Zip.dll
+C:\Users\pgmrdlm\Desktop\AP-Utilities\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\pgmrdlm\Desktop\AP-Utilities\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\pgmrdlm\Desktop\AP-Utilities\bin\Debug\Aspose.Zip.xml
+C:\Users\pgmrdlm\Desktop\AP-Utilities\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
