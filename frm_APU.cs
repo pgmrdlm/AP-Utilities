@@ -663,7 +663,21 @@ namespace APU___Astrophotorophy_Utilities
             btn_SubmitZip.Visible = false;
         }
 
+        private void lnl_7Zip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string strURL;
+            if (e.Link.LinkData != null)
+                strURL = e.Link.LinkData.ToString();
+            else
+                strURL = lnl_7Zip.Text.Substring(e.Link.Start, e.Link.Length);
 
+            if (!strURL.Contains("://"))
+                strURL = "https://" + strURL;
+
+            var si = new ProcessStartInfo(strURL);
+            Process.Start(si);
+            lnl_7Zip.LinkVisited = true;
+        }
     }
     
 }

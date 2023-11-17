@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AP_Utilities));
             this.pnl_CopyFolders = new System.Windows.Forms.Panel();
+            this.grb_ZipFolders = new System.Windows.Forms.GroupBox();
+            this.pcb_7Zip_Image = new System.Windows.Forms.PictureBox();
+            this.txb_FolderToZip = new System.Windows.Forms.TextBox();
+            this.btn_SelectFolderToZip = new System.Windows.Forms.Button();
+            this.txb_FolderToZipTo = new System.Windows.Forms.TextBox();
+            this.btn_SubmitZip = new System.Windows.Forms.Button();
+            this.btn_OutPutZipTo = new System.Windows.Forms.Button();
             this.grb_AddNewData = new System.Windows.Forms.GroupBox();
             this.btn_AddNewData = new System.Windows.Forms.Button();
             this.txb_NewDataIOutput = new System.Windows.Forms.TextBox();
@@ -42,12 +49,6 @@
             this.txb_OutputFolderPath = new System.Windows.Forms.TextBox();
             this.btn_Submit = new System.Windows.Forms.Button();
             this.btn_SelectOutput = new System.Windows.Forms.Button();
-            this.grb_ZipFolders = new System.Windows.Forms.GroupBox();
-            this.txb_FolderToZip = new System.Windows.Forms.TextBox();
-            this.btn_SelectFolderToZip = new System.Windows.Forms.Button();
-            this.txb_FolderToZipTo = new System.Windows.Forms.TextBox();
-            this.btn_SubmitZip = new System.Windows.Forms.Button();
-            this.btn_OutPutZipTo = new System.Windows.Forms.Button();
             this.lbl_SelectAction = new System.Windows.Forms.Label();
             this.cmb_SelectAction = new System.Windows.Forms.ComboBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
@@ -77,10 +78,12 @@
             this.lbl_ImageCamera = new System.Windows.Forms.Label();
             this.cmb_ImageLensTelescope = new System.Windows.Forms.ComboBox();
             this.cmb_ImageCamera = new System.Windows.Forms.ComboBox();
+            this.lnl_7Zip = new System.Windows.Forms.LinkLabel();
             this.pnl_CopyFolders.SuspendLayout();
+            this.grb_ZipFolders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_7Zip_Image)).BeginInit();
             this.grb_AddNewData.SuspendLayout();
             this.grb_AddAndCopy.SuspendLayout();
-            this.grb_ZipFolders.SuspendLayout();
             this.pnl_TargetAndEqipment.SuspendLayout();
             this.grb_TargetAndMount.SuspendLayout();
             this.grb_TypeOfAction.SuspendLayout();
@@ -100,6 +103,90 @@
             this.pnl_CopyFolders.Size = new System.Drawing.Size(1160, 501);
             this.pnl_CopyFolders.TabIndex = 1;
             this.pnl_CopyFolders.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_CopyImageData_Paint);
+            // 
+            // grb_ZipFolders
+            // 
+            this.grb_ZipFolders.Controls.Add(this.lnl_7Zip);
+            this.grb_ZipFolders.Controls.Add(this.pcb_7Zip_Image);
+            this.grb_ZipFolders.Controls.Add(this.txb_FolderToZip);
+            this.grb_ZipFolders.Controls.Add(this.btn_SelectFolderToZip);
+            this.grb_ZipFolders.Controls.Add(this.txb_FolderToZipTo);
+            this.grb_ZipFolders.Controls.Add(this.btn_SubmitZip);
+            this.grb_ZipFolders.Controls.Add(this.btn_OutPutZipTo);
+            this.grb_ZipFolders.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grb_ZipFolders.ForeColor = System.Drawing.Color.DarkRed;
+            this.grb_ZipFolders.Location = new System.Drawing.Point(26, 74);
+            this.grb_ZipFolders.Name = "grb_ZipFolders";
+            this.grb_ZipFolders.Size = new System.Drawing.Size(887, 252);
+            this.grb_ZipFolders.TabIndex = 7;
+            this.grb_ZipFolders.TabStop = false;
+            this.grb_ZipFolders.Text = "Archive Data Folders";
+            this.grb_ZipFolders.Visible = false;
+            // 
+            // pcb_7Zip_Image
+            // 
+            this.pcb_7Zip_Image.Image = ((System.Drawing.Image)(resources.GetObject("pcb_7Zip_Image.Image")));
+            this.pcb_7Zip_Image.Location = new System.Drawing.Point(12, 95);
+            this.pcb_7Zip_Image.Name = "pcb_7Zip_Image";
+            this.pcb_7Zip_Image.Size = new System.Drawing.Size(169, 83);
+            this.pcb_7Zip_Image.TabIndex = 4;
+            this.pcb_7Zip_Image.TabStop = false;
+            // 
+            // txb_FolderToZip
+            // 
+            this.txb_FolderToZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_FolderToZip.Location = new System.Drawing.Point(193, 23);
+            this.txb_FolderToZip.Name = "txb_FolderToZip";
+            this.txb_FolderToZip.ReadOnly = true;
+            this.txb_FolderToZip.Size = new System.Drawing.Size(602, 22);
+            this.txb_FolderToZip.TabIndex = 1;
+            // 
+            // btn_SelectFolderToZip
+            // 
+            this.btn_SelectFolderToZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SelectFolderToZip.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_SelectFolderToZip.Location = new System.Drawing.Point(54, 23);
+            this.btn_SelectFolderToZip.Name = "btn_SelectFolderToZip";
+            this.btn_SelectFolderToZip.Size = new System.Drawing.Size(127, 23);
+            this.btn_SelectFolderToZip.TabIndex = 0;
+            this.btn_SelectFolderToZip.Text = "Select Input";
+            this.btn_SelectFolderToZip.Click += new System.EventHandler(this.btn_SelectFolderToZip_Click);
+            // 
+            // txb_FolderToZipTo
+            // 
+            this.txb_FolderToZipTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_FolderToZipTo.Location = new System.Drawing.Point(193, 51);
+            this.txb_FolderToZipTo.Name = "txb_FolderToZipTo";
+            this.txb_FolderToZipTo.ReadOnly = true;
+            this.txb_FolderToZipTo.Size = new System.Drawing.Size(602, 22);
+            this.txb_FolderToZipTo.TabIndex = 1;
+            this.txb_FolderToZipTo.Visible = false;
+            // 
+            // btn_SubmitZip
+            // 
+            this.btn_SubmitZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SubmitZip.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_SubmitZip.Location = new System.Drawing.Point(193, 94);
+            this.btn_SubmitZip.Name = "btn_SubmitZip";
+            this.btn_SubmitZip.Size = new System.Drawing.Size(107, 23);
+            this.btn_SubmitZip.TabIndex = 3;
+            this.btn_SubmitZip.Text = "Archive";
+            this.btn_SubmitZip.UseVisualStyleBackColor = true;
+            this.btn_SubmitZip.Visible = false;
+            this.btn_SubmitZip.Click += new System.EventHandler(this.btn_SubmitZip_Click);
+            // 
+            // btn_OutPutZipTo
+            // 
+            this.btn_OutPutZipTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_OutPutZipTo.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_OutPutZipTo.Location = new System.Drawing.Point(54, 53);
+            this.btn_OutPutZipTo.Name = "btn_OutPutZipTo";
+            this.btn_OutPutZipTo.Size = new System.Drawing.Size(127, 23);
+            this.btn_OutPutZipTo.TabIndex = 2;
+            this.btn_OutPutZipTo.Text = "Select Output";
+            this.btn_OutPutZipTo.UseVisualStyleBackColor = true;
+            this.btn_OutPutZipTo.Visible = false;
+            this.btn_OutPutZipTo.Click += new System.EventHandler(this.btn_OutPutZipTo_Click);
             // 
             // grb_AddNewData
             // 
@@ -240,79 +327,6 @@
             this.btn_SelectOutput.UseVisualStyleBackColor = true;
             this.btn_SelectOutput.Visible = false;
             this.btn_SelectOutput.Click += new System.EventHandler(this.btn_SelectOutput_Click);
-            // 
-            // grb_ZipFolders
-            // 
-            this.grb_ZipFolders.Controls.Add(this.txb_FolderToZip);
-            this.grb_ZipFolders.Controls.Add(this.btn_SelectFolderToZip);
-            this.grb_ZipFolders.Controls.Add(this.txb_FolderToZipTo);
-            this.grb_ZipFolders.Controls.Add(this.btn_SubmitZip);
-            this.grb_ZipFolders.Controls.Add(this.btn_OutPutZipTo);
-            this.grb_ZipFolders.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grb_ZipFolders.ForeColor = System.Drawing.Color.DarkRed;
-            this.grb_ZipFolders.Location = new System.Drawing.Point(26, 74);
-            this.grb_ZipFolders.Name = "grb_ZipFolders";
-            this.grb_ZipFolders.Size = new System.Drawing.Size(887, 148);
-            this.grb_ZipFolders.TabIndex = 7;
-            this.grb_ZipFolders.TabStop = false;
-            this.grb_ZipFolders.Text = "Archive Data Folders";
-            this.grb_ZipFolders.Visible = false;
-            // 
-            // txb_FolderToZip
-            // 
-            this.txb_FolderToZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_FolderToZip.Location = new System.Drawing.Point(193, 23);
-            this.txb_FolderToZip.Name = "txb_FolderToZip";
-            this.txb_FolderToZip.ReadOnly = true;
-            this.txb_FolderToZip.Size = new System.Drawing.Size(602, 22);
-            this.txb_FolderToZip.TabIndex = 1;
-            // 
-            // btn_SelectFolderToZip
-            // 
-            this.btn_SelectFolderToZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SelectFolderToZip.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_SelectFolderToZip.Location = new System.Drawing.Point(54, 23);
-            this.btn_SelectFolderToZip.Name = "btn_SelectFolderToZip";
-            this.btn_SelectFolderToZip.Size = new System.Drawing.Size(127, 23);
-            this.btn_SelectFolderToZip.TabIndex = 0;
-            this.btn_SelectFolderToZip.Text = "Select Input";
-            this.btn_SelectFolderToZip.Click += new System.EventHandler(this.btn_SelectFolderToZip_Click);
-            // 
-            // txb_FolderToZipTo
-            // 
-            this.txb_FolderToZipTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_FolderToZipTo.Location = new System.Drawing.Point(193, 51);
-            this.txb_FolderToZipTo.Name = "txb_FolderToZipTo";
-            this.txb_FolderToZipTo.ReadOnly = true;
-            this.txb_FolderToZipTo.Size = new System.Drawing.Size(602, 22);
-            this.txb_FolderToZipTo.TabIndex = 1;
-            this.txb_FolderToZipTo.Visible = false;
-            // 
-            // btn_SubmitZip
-            // 
-            this.btn_SubmitZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SubmitZip.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_SubmitZip.Location = new System.Drawing.Point(193, 94);
-            this.btn_SubmitZip.Name = "btn_SubmitZip";
-            this.btn_SubmitZip.Size = new System.Drawing.Size(107, 23);
-            this.btn_SubmitZip.TabIndex = 3;
-            this.btn_SubmitZip.Text = "Archive";
-            this.btn_SubmitZip.UseVisualStyleBackColor = true;
-            this.btn_SubmitZip.Visible = false;
-            this.btn_SubmitZip.Click += new System.EventHandler(this.btn_SubmitZip_Click);
-            // 
-            // btn_OutPutZipTo
-            // 
-            this.btn_OutPutZipTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_OutPutZipTo.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_OutPutZipTo.Location = new System.Drawing.Point(54, 53);
-            this.btn_OutPutZipTo.Name = "btn_OutPutZipTo";
-            this.btn_OutPutZipTo.Size = new System.Drawing.Size(127, 23);
-            this.btn_OutPutZipTo.TabIndex = 2;
-            this.btn_OutPutZipTo.Text = "Select Output";
-            this.btn_OutPutZipTo.UseVisualStyleBackColor = true;
-            this.btn_OutPutZipTo.Visible = false;
-            this.btn_OutPutZipTo.Click += new System.EventHandler(this.btn_OutPutZipTo_Click);
             // 
             // lbl_SelectAction
             // 
@@ -644,6 +658,17 @@
             this.cmb_ImageCamera.TabIndex = 0;
             this.cmb_ImageCamera.SelectedIndexChanged += new System.EventHandler(this.cmb_ImageCamera_SelectedIndexChanged);
             // 
+            // lnl_7Zip
+            // 
+            this.lnl_7Zip.AutoSize = true;
+            this.lnl_7Zip.Location = new System.Drawing.Point(9, 185);
+            this.lnl_7Zip.Name = "lnl_7Zip";
+            this.lnl_7Zip.Size = new System.Drawing.Size(119, 16);
+            this.lnl_7Zip.TabIndex = 3;
+            this.lnl_7Zip.TabStop = true;
+            this.lnl_7Zip.Text = "https://7-zip.org/";
+            this.lnl_7Zip.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnl_7Zip_LinkClicked);
+            // 
             // frm_AP_Utilities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -657,12 +682,13 @@
             this.Load += new System.EventHandler(this.frm_AP_Utilities_Load);
             this.pnl_CopyFolders.ResumeLayout(false);
             this.pnl_CopyFolders.PerformLayout();
+            this.grb_ZipFolders.ResumeLayout(false);
+            this.grb_ZipFolders.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_7Zip_Image)).EndInit();
             this.grb_AddNewData.ResumeLayout(false);
             this.grb_AddNewData.PerformLayout();
             this.grb_AddAndCopy.ResumeLayout(false);
             this.grb_AddAndCopy.PerformLayout();
-            this.grb_ZipFolders.ResumeLayout(false);
-            this.grb_ZipFolders.PerformLayout();
             this.pnl_TargetAndEqipment.ResumeLayout(false);
             this.grb_TargetAndMount.ResumeLayout(false);
             this.grb_TargetAndMount.PerformLayout();
@@ -725,6 +751,8 @@
         private System.Windows.Forms.TextBox txb_FolderToZipTo;
         private System.Windows.Forms.Button btn_SubmitZip;
         private System.Windows.Forms.Button btn_OutPutZipTo;
+        private System.Windows.Forms.PictureBox pcb_7Zip_Image;
+        private System.Windows.Forms.LinkLabel lnl_7Zip;
     }
 }
 
